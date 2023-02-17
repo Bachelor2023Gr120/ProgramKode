@@ -1,19 +1,11 @@
 body{
   background-image: radial-gradient(circle, rgb(9, 58, 150), rgb(5, 1, 27));
-  
 }
 
 .navbar {
   background-color: #0c0c0f;
   margin-bottom: 0;
   border-radius: 0;
-}
-
-.footer1 {
-  background-color: #0c0c0f;
-  color: white;
-  padding: 15px;
-  margin: auto 0;
 }
 
 .navbar-brand{
@@ -60,4 +52,13 @@ body{
  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  font-size:4ch;
  margin: 30px;
+}
+
+
+
+.footer1 {
+  background-color: #0c0c0f;
+  color: white;
+  padding: 1px;
+  margin: auto 0;
 }

@@ -1,94 +1,130 @@
-.login-dark {
-    height:969px;
-    background-image: radial-gradient(circle, rgb(9, 58, 150), rgb(5, 1, 27));
-    background-size:cover;
-    position:relative;
-  }
+body{
+  background-image: radial-gradient(circle, rgb(9, 58, 150), rgb(5, 1, 27));
+  color: #fff;
+  text-align: center;
+  justify-content: center;
   
-  .login-dark form {
-    max-width:320px;
-    width:90%;
-    background-color:#0c0c0f;
-    padding:40px;
-    border-radius:4px;
-    transform:translate(-50%, -50%);
-    position:absolute;
-    top:50%;
-    left:70%;
-    color:#fff;
-    box-shadow:3px 3px 4px rgba(2, 191, 238, 0.2);
-  }
-  
-  .login-dark .illustration {
-    text-align:center;
-    padding:15px 0 20px;
-    font-size:100px;
-    color:#2980ef;
-  }
-  
-  .login-dark form .form-control {
-    background:none;
-    border:none;
-    border-bottom:1px solid #434a52;
-    border-radius:0;
-    box-shadow:none;
-    outline:none;
-    color:inherit;
-  }
-  
-  .login-dark form .btn-primary {
-    background:#214a80;
-    border:none;
-    border-radius:4px;
-    padding:11px;
-    box-shadow:none;
-    margin-top:26px;
-    text-shadow:none;
-    outline:none;
-  }
-  
-  .login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
-    background:#0b9eb8;
-    outline:none;
-  }
-  
-  .login-dark form .forgot {
-    display:block;
-    text-align:center;
-    font-size:12px;
-    color:#6f7a85;
-    opacity:0.9;
-    text-decoration:none;
-  }
-  
-  .login-dark form .forgot:hover, .login-dark form .forgot:active {
-    opacity:1;
-    text-decoration:none;
-  }
-  
-  .login-dark form .btn-primary:active {
-    transform:translateY(1px);
-  }
-  
-.text-only{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display:block;
-    text-align:center;
+}
+.navbar {
+  background-color: #0c0c0f;
+  margin-bottom: 0;
+  border-radius: 0;
 }
 
-.u-box{  
-    max-width:850px;
-    width:90%;
-    height:650px;
-    background-color:#9c9c9c;
-    padding:40px;
-    border-radius:4px;
-    transform:translate(-70%, -50%);
-    position:absolute;
-    top:50%;
-    left:70%;
-    color:#0a0a0a;
-    box-shadow:4px 4px 4px rgba(3, 3, 3, 0.2);
+.navbar-brand{
+  padding-right: 50px;
+}
+
+
+.main-content{
+  width:100%;
+  padding: 1%;
+}
+
+.main-content > img{
+  width: 30%;
+  margin:3%;
+  margin-top:0;
+  border-radius: 15%;
+  box-shadow: #0c0c0f;
+  
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(180deg, #f8c007 0%, #aa8f34 99%); 
+  width: 30%;
+  height: 550px;
+  border-radius: 5%;
+  border-top-right-radius: 0;
+  margin-left: 2% ;
+  direction:rtl; 
+  overflow:auto; 
+}
+
+.flex-container > button {
+  background-color: #191b1b;
+  width: 90%;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  
+}
+
+
+/* width */
+.flex-container::-webkit-scrollbar {
+  width: 20px; 
+}
+
+/* Track */
+.flex-container::-webkit-scrollbar-track {
+ background-color: #e2d8d8;
+ border-top-left-radius: 5px;
+ border-bottom-left-radius: 5px;
+
+ 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #075bf8 0%, #3d0536 99%); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(180deg, #07f81b 0%, #aa343a 99%); 
+}
+
+
+.sectors-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #089dfa;
+  width: 32%;
+  border-radius: 5%;
+  border-bottom-right-radius:0;
+  margin-left: 15px;
+  text-align: center;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 80%;
+  gap: 30px;
+  padding: 10px;
+  width: 80%;
+ 
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+}
+
+.item1 {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  grid-row: 1 / 2;
+
+}
+.item8 {
+  grid-area: 1 / 2;
 
 }
 
+.item1 > button{
+  background-image: linear-gradient(180deg, #f7b62c 0%, #eed460 99%); 
+  margin: 2%;
+  font-size: 25px;
+  width: 70%;
+  border-radius: 25% 15%;
+}
