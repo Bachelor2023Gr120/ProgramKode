@@ -59,15 +59,37 @@
       </div>
 
       <div class="login-dark">
-        <form method="post">
+        <form name="f1" action="../Database/authentication.php" onsubmit = "return validation()" method="post">
             <h2 class="text-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+            <div class="form-group"><input class="form-control" type="email" id="email" name="email" placeholder="Email"></div>
+            <div class="form-group"><input class="form-control" type="password" id="password" name="password" placeholder="Password"></div>
             <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot">Forgot your email or password?</a></form>
       </div>
 
-    </div>  
+    </div> 
+    <script>  
+      function validation()  
+      {  
+          var id=document.f1.email.value;  
+          var ps=document.f1.password.value;  
+          if(id.length=="" && ps.length=="") {  
+              alert("email and Password fields are empty");  
+              return false;  
+          }  
+          else  
+          {  
+              if(id.length=="") {  
+                  alert("email is empty");  
+                  return false;  
+              }   
+              if (ps.length=="") {  
+              alert("Password field is empty");  
+              return false;  
+              }  
+          }                             
+      }  
+  </script>   
     
 </body>
 </html>

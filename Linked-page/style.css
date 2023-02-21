@@ -85,12 +85,13 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   background-color: #089dfa;
   width: 32%;
   border-radius: 5%;
   border-bottom-right-radius:0;
   margin-left: 15px;
-  text-align: center;
+
 }
 
 
@@ -127,4 +128,16 @@ body{
   font-size: 25px;
   width: 70%;
   border-radius: 25% 15%;
+}
+
+
+
+.question-box{
+  color: #0c0c0f;
+  background-color: #f3dc5a;
+  margin-bottom: 30px;
+  padding: 5%;
+  margin: auto;
+  width: 40%;
+  border-radius: 20%;
 }
