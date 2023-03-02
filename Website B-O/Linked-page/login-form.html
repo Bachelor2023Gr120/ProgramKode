@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="../Index.html">Logo</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="../Index.html">Home</a></li>
+             <!-- <li><a href="./sectors.html">Sectors</a></li> -->
+              <li><a href="./about.html">About</a></li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+              <li  class="active"><a href="../Linked-page/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div>
+      <div class="u-box">
+         <div class="dis">
+          <h1>LOGIN FORM</h1>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Reprehenderit magnam odit quasi optio qui. 
+               Impedit excepturi enim dolor neque aspernatur, 
+               ad vitae sed voluptatum quam illum, molestias, dolorem 
+               voluptas. Ipsam.</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit magnam odit quasi optio qui. 
+                Impedit excepturi enim dolor neque aspernatur, 
+                ad vitae sed voluptatum quam illum, molestias, dolorem 
+                voluptas. Ipsam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit magnam odit quasi optio qui. 
+                  Impedit excepturi enim dolor neque aspernatur, 
+                  ad vitae sed voluptatum quam illum, molestias, dolorem 
+                  voluptas. Ipsam.</p>
+         </div>
+      </div>
+
+      <div class="login-dark">
+        <form name="f1" action="../connectToDb/authentication.php" onsubmit = "return validation()" method="post">
+            <h2 class="text-only">Login Form</h2>
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <div class="form-group"><input class="form-control" type="email" id="email" name="email" placeholder="Email"></div>
+            <div class="form-group"><input class="form-control" type="password" id="password" name="password" placeholder="Password"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot">Forgot your email or password?</a></form>
+      </div>
+
+    </div> 
+    <script>  
+      function validation()  
+      {  
+          var id=document.f1.email.value;  
+          var ps=document.f1.password.value;  
+          if(id.length=="" && ps.length=="") {  
+              alert("email and Password fields are empty");  
+              return false;  
+          }  
+          else  
+          {  
+              if(id.length=="") {  
+                  alert("email is empty");  
+                  return false;  
+              }   
+              if (ps.length=="") {  
+              alert("Password field is empty");  
+              return false;  
+              }  
+          }                             
+      }  
+  </script>   
+    
+</body>
+</html>

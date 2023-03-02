@@ -1,0 +1,47 @@
+[
+    
+    { 
+     "section": "A.5 Information security policies",  
+     "sectionDescription": "Annex 5 is about the management role in information security, primarily in procedures ", 
+     "questionsList": 
+     [
+     {
+        "questionTitle":"Policies for information security ",
+        "q":"Does the company have a set of security policies that is defined and approved by management?"
+    },
+     {
+        "questionTitle":" Review of the policies for information security",
+        "q":"How often does the company perform planned reviews of their current policies?"
+    }
+    ]
+    },
+
+    { 
+     "section": "A.6 Organization of information security",   
+     "sectionDescription": "Annex 6 is about the framework the organization has regarding information security as well as the controls within.  It has how you would interact with governing bodies as well as special interest groups.", 
+     "questionsList": 
+     [
+     {
+        "questionTitle":"Information security roles and responsibilities ",
+        "q":"Are all roles within the organization within information security defined and distributed?"
+    },
+     {
+        "questionTitle":"Segregation of duties",
+        "q":"Are conflicting duties and areas of responsibility segregated in order to avoid any unauthorized or unintentional modifications to data?"
+    },
+    {
+        "questionTitle":"Contact with authorities",
+        "q":"Would you describe the company to have a well-functioning relationship with the relevant authorities?"
+    },
+    {
+        "questionTitle":"Contact with special interest groups",
+        "q":"Have you established a bilateral relationship with other specialized groups or professional associations, which can be beneficial for the company?"
+    },
+    {
+        "questionTitle":"Information security in project management",
+        "q":"Does the company make sure to apply the security policies within all sectors or projects the company is involved in?"
+    }
+    ]
+    }
+
+]

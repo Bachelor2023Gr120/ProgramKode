@@ -1,0 +1,74 @@
+/* General */
+
+body  {
+    background-image: radial-gradient(circle, rgb(9, 58, 150), rgb(5, 1, 27));
+    text-align: center;
+    justify-content: center;
+  }
+  
+  #question-box {
+    width: 800px;
+    margin: 0 auto;
+    background-color: rgb(209, 207, 206);
+    border-radius: 8%;
+    padding: 20px;
+    margin-top: 5.5%;
+  }
+  
+  .navbar {
+    background-color: #0c0c0f;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  .navbar-brand{
+    padding-right: 50px;
+  }
+
+  h1, h2 {
+    color: rgb(29, 29, 29);
+    margin: 2%;
+    text-align: center;
+    font-size:small;
+  }
+
+  p{
+    color: black;
+    font-size: 2rem;
+  }
+
+  button{
+    background-color: rgb(10, 105, 23);
+    color: aliceblue;
+    border: 0;
+    width: 60px;
+    padding: 8px;
+    border-radius: 10%;
+    cursor: pointer;
+    margin: 2%;
+  }
+
+  button:hover{
+    background-color: rgb(17, 170, 38);
+  }
+
+  label{
+    font-size: 1.5rem;
+    padding: 1%;
+    color: black;
+  }
+
+  input{
+    cursor: pointer;
+    padding: 1%;
+  }
+ 
+ 
+  
+  /* mobile responsive styles*/
+  @media screen and (max-width: 800px){
+    #question-box {
+      padding: 3%;
+      max-width: 480px;
+    }
+  }

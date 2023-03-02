@@ -1,0 +1,24 @@
+ [
+    { 
+     "name": "Sec1",   
+     "question":"ques1",
+     "answers": ["Yes","NO"]
+    },
+    { 
+     "name": "Sec2",   
+     "question":"ques2",
+     "answers": ["Yes","NO"]
+    },
+    { 
+     "name": "Sec3",   
+     "question":"ques3",
+     "answers": ["Yes","NO"]
+    },
+    { 
+     "name": "Sec4",   
+     "question":"ques4",
+     "answers": ["Yes","NO"]
+    }
+]
+
+  
