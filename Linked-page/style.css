@@ -135,9 +135,31 @@ body{
 .question-box{
   color: #0c0c0f;
   background-color: #f3dc5a;
-  margin-bottom: 30px;
   padding: 5%;
   margin: auto;
+  margin-top: 7%;
   width: 40%;
   border-radius: 20%;
+}
+
+.tittel{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-bottom: 4%;
+
+}
+
+#quiz{
+ 
+}
+
+#submit{
+  background-color: #078f15;
+  border-radius: 15%;
+  border: 0;
+  margin-top: 15%;
+}
+#submit-button:hover{
+	background-color: #0af021;
 }
