@@ -1,3 +1,4 @@
+<?php include("./check_session.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +13,7 @@
     <script src="../index.js"></script>
 </head>
 <body>
+  
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -21,21 +23,28 @@
               <span class="icon-bar"></span>                        
             </button>
             <a class="navbar-brand" href="../Index.html">Logo</a>
+            
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
+          
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../Index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+               
+              <li><a href="../Linked-page/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
           </div>
         </div>
       </nav>
-
-      <div class="question-box" id="question-box">
+      
+      <h1 style="color:white; margin:2%; font-size: 2rem;" id="username-display"></h1>
+      <div class="question-box" id="question-box">  
         <main>
         </main>
       </div>
-    </body>
 
-
+      <script>
+        const Username = "<?php echo $_SESSION['name']; ?>";
+        const usernameDisplay = document.getElementById("username-display");
+        usernameDisplay.textContent = `Hello ${Username}`;
+      </script>
     </body>
     </html>

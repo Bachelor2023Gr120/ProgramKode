@@ -4,8 +4,11 @@
     $password = '';  
     $db_name = "logindb";  
       
-    $con = mysqli_connect($host, $email, $password, $db_name);  
+    $con = mysqli_connect($host, $email, $password,$db_name);  
     if(mysqli_connect_errno()) {  
         die("Failed to connect with MySQL: ". mysqli_connect_error());  
     }  
 ?> 
+
+
+

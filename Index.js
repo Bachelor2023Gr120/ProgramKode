@@ -25,14 +25,15 @@ function initialize(questions) {
 
   function updateDisplay() {
      for( i=0; i<questions.length; i++){
-    showProduct(questions[i]);
+    showQuestion(questions[i]);
   }
 }
 
 
 
+
 let currentQuestionIndex = 0;
-function showProduct(question) {
+function showQuestion(question) {
   const main = document.querySelector('main');
   main.innerHTML = ''; // clear previous content
   const section = document.createElement('section');
@@ -81,7 +82,7 @@ function showProduct(question) {
     const radioYes = document.createElement('input');
     radioYes.setAttribute('type', 'radio');
     radioYes.setAttribute('name', `q${index}`);
-    radioYes.setAttribute('value', 'yes');
+    radioYes.setAttribute('value', '1');
     radioDiv.appendChild(radioYes);
 
     const labelYes = document.createElement('label');
@@ -93,7 +94,7 @@ function showProduct(question) {
     const radioNo = document.createElement('input');
     radioNo.setAttribute('type', 'radio');
     radioNo.setAttribute('name', `q${index}`);
-    radioNo.setAttribute('value', 'no');
+    radioNo.setAttribute('value', '0');
     radioDiv.appendChild(radioNo);
 
     const labelNo = document.createElement('label');
@@ -105,11 +106,14 @@ function showProduct(question) {
     return radioDiv;
   }
 
-
+  
+ 
 
   function createJSONFile(answers, Username) {
-    const jsonString = JSON.stringify(answers);
-    const blob = new Blob([jsonString], { type: 'application/json' });
+    const jsonString = JSON.stringify(answers, null, 2); // add 2-space indentation for readability
+  const formattedJsonString = jsonString.replace(/(?:\r\n|\r|\n)/g, '\n'); // add newline after each section
+  const blob = new Blob([formattedJsonString], { type: 'application/json' });
+  
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
@@ -123,7 +127,6 @@ function showProduct(question) {
 
   function submitAnswers(e) {
     e.preventDefault();
-  
     const formData = new FormData(form);
     const questionAnswers = {};
   
@@ -141,21 +144,25 @@ function showProduct(question) {
   
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
-      showProduct(questions[currentQuestionIndex]);
+      showQuestion(questions[currentQuestionIndex]);
     } else {
       const endMessage = document.createElement('p');
       endMessage.textContent = 'Thank you for answering all the questions!';
       main.appendChild(endMessage);
-      createJSONFile(userAnswers,"USERNAME");
+
+      createJSONFile(userAnswers,Username);
     }
   }
       form.addEventListener('submit', submitAnswers);
  
 }
 
-showProduct(questions[currentQuestionIndex]);
-
+showQuestion(questions[currentQuestionIndex]);
 
 
 }
+
+
+
+
 
