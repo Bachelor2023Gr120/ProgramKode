@@ -1,6 +1,6 @@
 body{
-  background-image: radial-gradient(circle, rgb(9, 58, 150), rgb(5, 1, 27));
-  color: #fff;
+  background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(194, 194, 194));
+  color: #000000;
   text-align: center;
   justify-content: center;
   
@@ -15,7 +15,7 @@ body{
   padding-right: 50px;
 }
 
-
+/*
 .main-content{
   width:100%;
   padding: 1%;
@@ -28,134 +28,17 @@ body{
   border-radius: 15%;
   box-shadow: #0c0c0f;
   
-}
+}*/
 
-/*
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  background-image: linear-gradient(180deg, #f8c007 0%, #aa8f34 99%); 
-  width: 30%;
-  height: 550px;
-  border-radius: 5%;
-  border-top-right-radius: 0;
-  margin-left: 2% ;
-  direction:rtl; 
-  overflow:auto; 
-}
-
-.flex-container > button {
-  background-color: #191b1b;
-  width: 90%;
-  margin: 10px;
-  border-radius: 10px;
+.items {
+  display: block;
   text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-  
-}
-
-
-width 
-.flex-container::-webkit-scrollbar {
-  width: 20px; 
-}
-
- Track 
-.flex-container::-webkit-scrollbar-track {
- background-color: #e2d8d8;
- border-top-left-radius: 5px;
- border-bottom-left-radius: 5px;
-
- 
-}
- 
-/* Handle 
-::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(180deg, #075bf8 0%, #3d0536 99%); 
-  border-radius: 10px;
-}
-
-/* Handle on hover
-::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(180deg, #07f81b 0%, #aa343a 99%); 
-}
-
-
-.sectors-title{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #089dfa;
-  width: 32%;
-  border-radius: 5%;
-  border-bottom-right-radius:0;
-  margin-left: 15px;
-
-}
-*/
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 30% 80%;
-  gap: 30px;
-  padding: 10px;
-  width: 80%;
- 
-}
-
-.grid-container > div {
-  text-align: center;
-  padding: 20px 0;
   font-size: 15px;
+  margin: 10%;
+  margin-top: 0;
 }
-
-.item1 {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  grid-row: 1 / 2;
-
-}
-.item8 {
-  grid-area: 1 / 2;
-
-}
-
-.item1 > button{
-  background-image: linear-gradient(180deg, #50504f 0%, #e7e6e6 99%); 
-  color: #0c0c0f;
-  margin: 2%;
-  font-size: 25px;
-  width: 70%;
-  border-radius: 25% 15%;
-}
-
-
-/*
-.question-box{
-  color: #0c0c0f;
-  background-color: #f3dc5a;
-  padding: 5%;
-  margin: auto;
-  margin-top: 7%;
-  width: 40%;
-  border-radius: 20%;
-}
-
-.tittel{
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  padding-bottom: 4%;
-
-}
-
-#quiz{
  
-}
-*/
+
 
 #submit{
   background-color: #078f15;
@@ -165,4 +48,26 @@ width
 }
 #submit-button:hover{
 	background-color: #0af021;
+}
+
+
+.options{
+  margin: auto;
+  margin-top: 5%;
+  width: 50%;
+  padding: 10px;
+}
+
+.options > button{
+  background-color: #078f15;
+  color: rgb(255, 255, 255);
+  border-radius: 8%;
+  border: 0;
+  width: auto;
+  padding: 1%;
+}
+
+.options > button:hover{
+	background-color: #0af021;
+  color: #000000;
 }

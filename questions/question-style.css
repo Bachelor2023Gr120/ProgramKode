@@ -1,8 +1,8 @@
 /* General */
 
 body  {
-    background-image: radial-gradient(circle, rgb(9, 58, 150), rgb(5, 1, 27));
-    text-align: center;
+  background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(194, 194, 194));
+  text-align: center;
     justify-content: center;
   }
 
@@ -42,9 +42,9 @@ body  {
 
   button{
     background-color: rgb(10, 105, 23);
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     border: 0;
-    width: 60px;
+    width: auto;
     padding: 8px;
     border-radius: 10%;
     cursor: pointer;
