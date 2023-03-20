@@ -26,8 +26,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="../Index.html">Home</a></li>
-        <li class="active"><a href="../Linked-page/options.php">Options</a></li>
-        <li><a href="./Linked-page/about.html">About</a></li>
+        <li class="active"><a href="../Linked-page/options.php">Workspace</a></li>
+        <li><a href="../Linked-page/about.html">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="../Linked-page/logout.php"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
@@ -46,7 +46,7 @@
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint adipisci repudiandae consequuntur vel accusantium reprehenderit nihil delectus aliquid vero, assumenda nesciunt explicabo autem, doloremque eius aliquam. Sit a libero repellat?</p>
     <button onclick="location.href='../Results/display-result.php'">Display Result</button>
     <br><br>
-    <h1> If you want to compaer to test results:</h1>
+    <h1> If you want to compare to test results:</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint adipisci repudiandae consequuntur vel accusantium reprehenderit nihil delectus aliquid vero, assumenda nesciunt explicabo autem, doloremque eius aliquam. Sit a libero repellat?</p>
     <button onclick="location.href='../Results/comparResult.php'">Compar Results</button>
 
