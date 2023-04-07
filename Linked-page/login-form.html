@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="login-style.css">
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
 </head>
 <body>
   <nav class="navbar navbar-inverse">
@@ -34,14 +36,10 @@
       </div>
     </div>
   </nav>
-      <div class="u-box">
-          <h1>LOGIN FORM</h1>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Reprehenderit magnam odit quasi optio qui. 
-               Impedit excepturi enim dolor neque aspernatur, 
-               ad vitae sed voluptatum quam illum, molestias, dolorem 
-               voluptas. Ipsam.</p>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  <div class="login-page">
+        <div class="login-text">
+            <h1>LOGIN FORM</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Reprehenderit magnam odit quasi optio qui. 
                 Impedit excepturi enim dolor neque aspernatur, 
                 ad vitae sed voluptatum quam illum, molestias, dolorem 
@@ -51,19 +49,24 @@
                   Impedit excepturi enim dolor neque aspernatur, 
                   ad vitae sed voluptatum quam illum, molestias, dolorem 
                   voluptas. Ipsam.</p>
-      </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit magnam odit quasi optio qui. 
+                    Impedit excepturi enim dolor neque aspernatur, 
+                    ad vitae sed voluptatum quam illum, molestias, dolorem 
+                    voluptas. Ipsam.</p>
+        </div>
 
-      <div class="login-box">
-        <form name="f1" action="../connectToDb/authentication.php" onsubmit = "return validation()" method="post">
-            <h2 class="text-only">Login Form</h2>
-            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group"><input class="form-control" type="email" id="email" name="email" placeholder="Email"></div>
-            <div class="form-group"><input class="form-control" type="password" id="password" name="password" placeholder="Password"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div>
-          </form>
-      </div>
+        <div class="login-box">
+            <form name="f1" action="../connectToDb/authentication.php" onsubmit = "return validation()" method="post">
+                <h2 class="text-only">Login Form</h2>
+                <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+                <div class="form-group"><input class="form-control" type="email" id="email" name="email" placeholder="Email"></div>
+                <div class="form-group"><input class="form-control" type="password" id="password" name="password" placeholder="Password"></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div>
+              </form>
+        </div>
+    </div>
 
-    
     <script>  
       function validation()  
       {  

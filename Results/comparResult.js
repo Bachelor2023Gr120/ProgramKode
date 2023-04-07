@@ -2,7 +2,6 @@ var ComparisontDescription="Take a look at the chart below, which highlights the
 function checkFile() {
   let fileInput1 = document.getElementById('file1');
   let fileInput2 = document.getElementById('file2');
-
   if (fileInput1.files.length === 0 || fileInput2.files.length === 0) {
     document.getElementById('Titel').innerHTML = "";
     alert('Please choose files.');
@@ -26,14 +25,14 @@ function processFiles() {
       let data1 = JSON.parse(fileReader1.result);
       fileReader2.onload = function() {
         let data2 = JSON.parse(fileReader2.result);
-        plotChart(data1, data2);
+        plotChart(data1, data2, file1, file2);
       }
       fileReader2.readAsText(file2);
     }
     fileReader1.readAsText(file1);
   }
   
-  function plotChart(data1, data2) {
+  function plotChart(data1, data2, file1, file2) {
     let labels = [];
     let complianceData1 = [];
     let complianceData2 = [];
@@ -64,13 +63,13 @@ function processFiles() {
     let chart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: labels,
+        labels:  labels,
         datasets: [{
-          label: 'File 1',
+          label: file1.name,
           backgroundColor: 'rgb(11, 132, 165)',
           data: complianceData1
         }, {
-          label: 'File 2',
+          label: file2.name,
           backgroundColor: 'rgb(246, 200, 95)',
           data: complianceData2
         }]

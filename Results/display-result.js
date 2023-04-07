@@ -106,8 +106,7 @@ function plotChart(data) {
             {
               ticks: {
                 beginAtZero: true,
-                max: 100,
-                stepSize: 10,
+                max: 100
               },
             },
           ],

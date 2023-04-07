@@ -8,6 +8,8 @@
     <title>Results Display</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="display-result.js"></script>
     <link rel="stylesheet" href="style.css">
 
@@ -37,7 +39,7 @@
     </nav>
 
 
-<div class="content" id="file-reader">
+<div class="file-Upload" id="file-reader">
     <h1>Display your results</h1> <br>
     <p>
         Visualize your results with ease using our chart feature, 
@@ -49,14 +51,14 @@
     <button type="button" onclick="checkFile()">Submit</button>
 </div>
    
-<h1 id="Results"></h1>
-<p id="chart-description"></p>
+     <h1 id="Results"></h1>
+     <p id="chart-description"></p>
 <div class="display">
     <canvas class="bar-chart" id="chart"></canvas>
     <canvas class="donut-chart" id="donut-chart"></canvas>
 </div>
 
-<div class="Compare">
+<div class="compare-button">
     <p id="Compare"></p>
 </div>
 

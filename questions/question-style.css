@@ -3,16 +3,18 @@
 body  {
   background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(194, 194, 194));
   text-align: center;
-    justify-content: center;
+  justify-content: center;
   }
 
   #question-box {
+    position: relative;
     width: 800px;
     margin: 0 auto;
-    background-color: rgb(209, 207, 206);
+    background-color: rgb(190, 189, 188);
     border-radius: 8%;
     padding: 20px;
-    margin-top: 5.5%;
+    margin-top: 3.5%;
+    margin-bottom: 5%;
   }
   
 
@@ -31,7 +33,8 @@ body  {
     color: rgb(29, 29, 29);
     margin: 2%;
     text-align: center;
-    font-size:small;
+    font-size:medium;
+    font-weight: bolder;
   }
   
 
@@ -65,13 +68,54 @@ body  {
     cursor: pointer;
     padding: 1%;
   }
- 
- 
+
+  .pageNr{
+    color: rgb(0, 0, 0);
+    font-size:medium;
+    margin-bottom: -1%;
+
+  }
+
+  .tipText {
+    background-color: rgb(235, 224, 71);
+    color: rgb(0, 0, 0);
+    border-radius: 10%;
+    width: 60%;
+    padding: 2%;
+    position:relative;
+    left: 20%;
+    
+  }
   
+  .tip-container{
+  background-color: #e6ee70;
+  font-weight: bolder;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  right: 100%;
+  }
+
+  .tip-title{
+  font-weight: bold;
+  
+  }
+  
+ 
   /* mobile responsive styles*/
   @media screen and (max-width: 800px){
     #question-box {
       padding: 3%;
-      max-width: 480px;
+      max-width: 90%;
+    }
+
+    .tipText {
+      padding: 2%;
+      position:relative;
+      left: 4%;
+      width: 95%;
+    
+      
     }
   }

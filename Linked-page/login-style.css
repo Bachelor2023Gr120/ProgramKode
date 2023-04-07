@@ -1,15 +1,47 @@
+body{
+  background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(194, 194, 194));
+  color: #000000;
+  text-align: center;
+  justify-content: center;
+}
+
+.login-page{
+  position: relative;
+}
+
+.text-only{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display:block;
+  text-align:center;
+}
+
+.login-text{  
+  display: block;
+  align-items: center;
+  width: 40%;
+  margin: 10%;
+  margin-left: 10%;
+}
+
+.login-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .login-box form {
-    max-width:320px;
-    width:90%;
-    background-color:#0c0c0f;
-    padding:40px;
-    border-radius:4px;
-    transform:translate(-50%, -50%);
-    position:absolute;
-    top:50%;
-    left:70%;
-    color:#fff;
-    box-shadow:3px 3px 4px rgba(0, 10, 12, 0.2);
+  max-width:320px;
+  width:90%;
+  background-color:#0c0c0f;
+  padding:40px;
+  border-radius:4px;
+  transform:translate(-50%, -50%);
+  position:absolute;
+  top:50%;
+  left:70%;
+  color:#fff;
+  box-shadow:3px 3px 4px rgba(0, 10, 12, 0.2);
   }
   
   .login-box .illustration {
@@ -63,16 +95,22 @@
     transform:translateY(1px);
   }
   
-.text-only{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display:block;
-    text-align:center;
-}
 
-.u-box{  
-display: block;
-align-items: center;
-width: 40%;
-margin: 10%;
-margin-left: 5%;
-}
+
+  @media screen and (max-width: 768px) {
+    .login-box {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .login-text {
+      width: 80%;
+      margin: 10% auto 0;
+    }
+    
+    .login-box form {
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 55%;
+    }
+  }

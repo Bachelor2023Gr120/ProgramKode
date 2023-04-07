@@ -15,12 +15,20 @@ body{
     padding-right: 50px;
   }
 
-.content{
+.file-Upload{
   margin: auto;
   padding: 8px;
   margin-top: 2%;
   margin-bottom: 3%;
   width: 50%;
+
+}
+
+.content{
+  margin: auto;
+  padding: 8px;
+  margin-top: 10%;
+  width: 80%;
 
 }
 
@@ -36,17 +44,21 @@ body{
   margin-left: 1%;
 }
 
-
 .display{
   display: flex;
   text-align: center;
   justify-content: center;
   margin-top: 2%;
- 
 }
 canvas {
   max-width:  40%;
   max-height: 320px;
+}
+
+.CompareFiles{
+   margin-top: 5%;
+  text-align: center;
+  justify-content: center;
 }
 
 .CompareFiles > p{
@@ -64,7 +76,7 @@ canvas {
  
 }
 
-.Compare{
+.compare-button{
   margin: auto;
   margin-top: 6%;
   width: 50%;
@@ -78,7 +90,48 @@ button{
   width: auto;
   padding: 8px;
   border-radius: 10%;
+  margin-bottom: 3%;
+
 }
 button:hover{
   background-color: rgb(17, 170, 38);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .file-Upload{
+    width: 90%;
+  }
+  .display{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2%;
+  }
+  canvas {
+    max-width:  90%;
+    max-height: 420px;
+  }
+  .compare-button{
+    width: 90%;
+    margin-bottom: 3%;
+  }
+  .donut-chart{
+    max-width:  70%;
+    max-height: 250px;
+  }
+  .CompareFiles{
+    width: 90%;
+ } 
+  .CompareFiles > p{
+    margin-top: 2%;
+    margin-bottom: 6%;
+    width: 100%;
+  }
+  
+  .CompareFiles > canvas{
+    max-width:  100%;
+    max-height: 420px;
+  
+  }
 }
