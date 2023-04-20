@@ -1,0 +1,86 @@
+body{
+  background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(194, 194, 194));
+  color: #000000;
+  text-align: center;
+  justify-content: center;
+  
+}
+.navbar {
+  background-color: #0c0c0f;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-brand{
+  padding-right: 50px;
+}
+
+/*
+.main-content{
+  width:100%;
+  padding: 1%;
+}
+
+.main-content > img{
+  width: 30%;
+  margin:3%;
+  margin-top:0;
+  border-radius: 15%;
+  box-shadow: #0c0c0f;
+  
+}*/
+
+.items {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  margin: 10%;
+  margin-top: 0;
+}
+ 
+
+
+#submit{
+  background-color: #078f15;
+  border-radius: 15%;
+  border: 0;
+  margin-top: 15%;
+}
+#submit-button:hover{
+	background-color: #0af021;
+}
+
+
+.options{
+  margin: auto;
+  margin-top: 5%;
+  width: 50%;
+  padding: 10px;
+}
+.options > p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+ 
+}
+
+.options > button{
+  background-color: #078f15;
+  color: rgb(255, 255, 255);
+  border-radius: 8%;
+  border: 0;
+  width: auto;
+  padding: 1%;
+}
+
+.options > button:hover{
+	background-color: #0af021;
+  color: #000000;
+}
+
+@media only screen and (max-width: 768px) {
+  .options{
+    margin: auto;
+    margin-top: 5%;
+    width: 90%;
+  }
+}

@@ -1,4 +1,4 @@
-<?php include("../questions/check_session.php"); ?>
+<?php include("../Authentication/check_session.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +8,13 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <script src="comparResult.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+
+  <link rel="stylesheet" href="compareResultStyle.css">
+  <script src="compareResult.js"></script>
 
 </head>
 <body>
@@ -26,11 +31,11 @@
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
               <li><a href="../Index.html">Home</a></li>
-              <li class="active"><a href="../Linked-page/Workspace.php">Workspace</a></li>
-              <li><a href="../Linked-page/about.html">About</a></li>
+              <li class="active"><a href="../Pages/Workspace.php">Workspace</a></li>
+              <li><a href="../Pages/about.html">About</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-            <li><a href="../Linked-page/logout.php"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+            <li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
             </ul>
           </div>
         </div>
