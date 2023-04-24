@@ -1,7 +1,7 @@
 <?php      
         // Variables used in the database connection
     $host = "192.168.1.25";  //Database Serveren
-    $email = "test";  
+    $email = "root";  
     $password = 'passord';  
     $db_name = "logindb";  
                     // Establishing the connection to the MySql/DB
