@@ -1,6 +1,6 @@
 <?php      
         // Variables used in the database connection
-    $host = "localhost";  
+    $host = "192.168.1.25";  //Database Serveren
     $email = "root";  
     $password = '';  
     $db_name = "logindb";  
