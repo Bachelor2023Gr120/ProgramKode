@@ -7,43 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results Display</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="displayResultStyle.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
-
     <script src="displayResult.js"></script>
-    <link rel="stylesheet" href="displayResultStyle.css">
+    </head>
 
-</head>
-<body>  
+<body onload="window.scroll({ top: 0,left: 0,behavior: 'smooth' });"> 
+  
 <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="../Index.html">Logo</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li><a href="../Index.html">Home</a></li>
-              <li class="active"><a href="../Pages/Workspace.php">Workspace</a></li>
-              <li><a href="../Pages/about.html">About</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-            <li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-
-
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a href="../index.php" >
+          <img class="logo-img" src="../Images/logo.png" alt="Card image">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.php">Home</a></li>
+          <li><a href="../Pages/Workspace.php">Workspace</a></li>
+          <li><a href="../Pages/about.html">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <?php
+          if(isset($_SESSION['user_id'])) {
+              // User is logged in, display username and Logout button
+              echo '<li><a href="#"><span style="margin:0; padding: 0;"id="username-display"></span></a></li>';
+              echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
+          } else {
+              // User is not logged in, display Login button
+              echo '<li><a href="../Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+          }
+          ?>          
+        </ul>
+      </div>
+    </div>
+  </nav>
 <div class="file-Upload" id="file-reader">
     <h1>Display your results</h1> <br>
     <p>
@@ -61,34 +69,28 @@
    <div class="main-content">
           <h1 id="Results"></h1>
           <p id="chart-description"></p>
-            <div>
-                <div id="show-instructions" >
-                <h4 id="show-instructions-txt" style="display: none;">Learn how to use this webpage effectively with our instructions.</h4>
-                <button id="show-instructions-btn" style="display: none;">Instructions</button>
-                </div>
-                
-                    <div id="instruction-box" style="display: none;">
-                      <button id="close-instructions-btn">X</button>
-                      <div id="instruction-text"></div>
-                    </div>
-            </div>
+          <p id="instruction-text" style="text-align: start; justify-content: center;"></p>
 
             <div class="charts">
-           
                 <canvas class="bar-chart" id="chart" width="940" height="620" style="display: block; height: 660px; width: 420px;"></canvas>
                 <canvas class="donut-chart" id="donut-chart" width="940" height="620" style="display: block; height: 660px; width: 420px;"></canvas>
-                
             </div>
 
             <div class="answers">
                   <div id="questions"></div>
-                  <div id="userAnswers"></div>
+                  <div id="userAnswers" style="font-weight: bold;"></div>
             </div>
 
             <div class="compare-button">
                 <p id="Compare"></p>
             </div>
       </div>
+
+      <script>
+        const Username = "<?php echo $_SESSION['name']; ?>";
+        const usernameDisplay = document.getElementById("username-display");
+        usernameDisplay.textContent = `${Username}`;
+      </script>
   
 </body>
 </html>

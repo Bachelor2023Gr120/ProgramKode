@@ -6,17 +6,6 @@ body  {
   justify-content: center;
   }
 
-  #question-box {
-    position: relative;
-    width: 800px;
-    margin: 0 auto;
-    background-color: rgb(190, 189, 188);
-    border-radius: 8%;
-    padding: 20px;
-    margin-top: 3.5%;
-    margin-bottom: 5%;
-  }
-  
 
   .navbar {
     background-color: #0c0c0f;
@@ -27,7 +16,7 @@ body  {
   .navbar-brand{
     padding-right: 50px;
   }
-  
+
   
   h1, h2 {
     color: rgb(29, 29, 29);
@@ -39,9 +28,24 @@ body  {
   
 
   p{
+    text-align:start;
+    justify-content:left;
     color: black;
     font-size: 2rem;
   }
+
+  
+  #question-box {
+    background-color: rgb(190, 189, 188);
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    border-radius: 8%;
+    padding: 20px;
+    margin-top: 3.5%;
+    margin-bottom: 5%;
+  }
+  
 
   button{
     background-color: rgb(10, 105, 23);
@@ -60,13 +64,14 @@ body  {
 
   label{
     font-size: 1.5rem;
-    padding: 1%;
+    padding: 3%;
+    padding-left: 0.5%;
     color: black;
   }
 
   input{
     cursor: pointer;
-    padding: 1%;
+    padding: 4%;
   }
 
   .pageNr{
@@ -88,20 +93,23 @@ body  {
   }
   
   .tip-container{
-  background-color: #e6ee70;
-  font-weight: bolder;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  right: 100%;
+    background-color: #e6ee70;
+    font-weight: bolder;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    right: 100%;
   }
 
   .tip-title{
-  font-weight: bold;
-  
+   font-weight: bold;
   }
-  
+  .logo-img{
+    margin-top: 15%; 
+    max-height: 40px; 
+    max-width: 50px;
+  }
  
   /* mobile responsive styles*/
   @media screen and (max-width: 800px){
@@ -115,7 +123,11 @@ body  {
       position:relative;
       left: 4%;
       width: 95%;
-    
-      
+    }
+    .logo-img{
+      max-height: 45px; 
+      max-width: 55px;
+      margin-top: 1%; 
+      margin-left: 15%; 
     }
   }

@@ -1,6 +1,6 @@
 const ChartDescription="The bar chart displays your compliance percentage for each section on the left, while the donut chart on the right shows your overall result.";
 const text ="    Our platform offers a valuable feature that allows users to effectively compare and contrast two distinct test results.This functionality proves to be incredibly useful in identifying any modifications or adjustments made since the last test, thus enabling individuals to gain a deeper understanding of their progress over time. By utilizing this tool, users can easily track their development and make informed decisions based on their testing data.";
-const instructionTextt = "Instruction for using this webpage:<br>- To view your answers again, click on the corresponding bar in the chart to display them.<br>- To hide any displayed data, click its name. e.g. Partial-Compliance!";
+const instructionTextt = "<b>Instruction for using this webpage:</b><br>- To view your answers again, click on the corresponding bar in the chart to display them.<br>- To hide any displayed data, click its name. e.g. Partial-Compliance!";
 
 function buttonCreate() {
           const button = document.createElement('button');
@@ -9,13 +9,13 @@ function buttonCreate() {
 
           // Attach the "click" event to your button
           button.addEventListener('click', () => {
-            location.href='./comparResult.php';
+            location.href='./compareResult.php';
           })
           document.body.appendChild(button);
 }
 
 function checkFile() {
-      let fileInput = document.getElementById('file');
+        let fileInput = document.getElementById('file');
         if (fileInput.files.length === 0) {
           document.getElementById('Results').innerHTML = " ";
           alert('Please choose a file.');
@@ -23,6 +23,7 @@ function checkFile() {
         } else {
           document.getElementById('Results').innerHTML = 'Compliance Report';
           document.getElementById('chart-description').innerHTML = ChartDescription;
+          document.getElementById('instruction-text').innerHTML = instructionTextt;
           DisplayResults();
           document.getElementById('Compare').innerHTML = text;
           buttonCreate();
@@ -34,10 +35,10 @@ function checkFile() {
           const instructionBox = document.getElementById("instruction-box");
           const showInstructionsBtn = document.getElementById("show-instructions-btn");
           const closeInstructionsBtn = document.getElementById("close-instructions-btn");
-          const instructionText = document.getElementById("instruction-text");
+          //const instructionText = document.getElementById("instruction-text");
           showInstructionsBtn.addEventListener("click", function() {
             instructionBox.style.display = "block";
-            instructionText.innerHTML = instructionTextt;
+            //instructionText.innerHTML = instructionTextt;
             document.getElementById('show-instructions-btn').style.display = 'none';
             document.getElementById('show-instructions-txt').style.display = 'none';
           });
@@ -97,17 +98,16 @@ function DisplayResults1(index) {
             questionTitleDiv.innerHTML = questionsList[i].q + '<br>';
             questionDiv.appendChild(questionTitleDiv);
 
-            let answer = questions[i];
+            let answer = questions[i]; //Read wrong data!!!
             let answerDiv = document.createElement('div');
             answerDiv.classList.add('answer');
-            if (answer === "1") {
+            if (answer == "1") {
               answerDiv.innerHTML = '<p>Yes</p>';
-            } else if (answer === "0.5") {
+            } else if (answer == "0.5") {
               answerDiv.innerHTML = '<p>Partial</p>';
             } else {
               answerDiv.innerHTML = '<p>No</p>';
             }
-
             questionDiv.appendChild(answerDiv);
             questionsDiv.appendChild(questionDiv);
           }

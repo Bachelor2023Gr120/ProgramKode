@@ -10,32 +10,42 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
-</head>
+  </head>
 <body>
-
+  
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="../Index.html">Logo</a>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a href="../index.php" >
+          <img class="logo-img" src="../Images/logo.png" alt="Card image">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.php">Home</a></li>
+          <li><a href="../Pages/Workspace.php">Workspace</a></li>
+          <li><a href="../Pages/about.html">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <?php
+          if(isset($_SESSION['user_id'])) {
+              // User is logged in, display username and Logout button
+              echo '<li><a href="#"><span style="margin:0; padding: 0;"id="username-display"></span></a></li>';
+              echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
+          } else {
+              // User is not logged in, display Login button
+              echo '<li><a href="../Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+          }
+          ?>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="../Index.html">Home</a></li>
-        <li class="active"><a href="../Pages/options.php">Workspace</a></li>
-        <li><a href="../Pages/about.html">About</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
 
 <div class="options">
@@ -52,7 +62,7 @@
     </p>
     <button onclick="location.href='../questions/questionList.php'">Start Questionnaire</button>
     <br><br>
-    <h1>Display Result</h1>
+    <h1>Display your questionnaire Result</h1>
     <p>
       This tool helps organizations assess their compliance level with the <b>ISO27001</b> standard. 
       To get started, simply take our questionnaire, which is presented above. Once completed, 
@@ -61,17 +71,23 @@
       level with <b>ISO27001</b>, allowing you to take the necessary steps to improve your organization's
        security posture.
     </p>
-    <button onclick="location.href='../Results/displayResult.php'">Display Result</button>
+    <button onclick="location.href='../Results/displayResult.php'">Display</button>
     <br><br>
-    <h1>Compare Results</h1>
+    <h1>Compare your questionnaire Results</h1>
     <p>
       The comparison tool allows you to easily compare the results of your current and previous 
       questionnaires in an interactive graph. By analyzing the data side by side, you can quickly 
       identify areas of improvement and see the progress you've made over time.
     </p>
-    <button onclick="location.href='../Results/compareResult.php'">Compare Results</button>
+    <button onclick="location.href='../Results/compareResult.php'">Compare</button>
 
 </div>
+
+      <script>
+        const Username = "<?php echo $_SESSION['name']; ?>";
+        const usernameDisplay = document.getElementById("username-display");
+        usernameDisplay.textContent = `${Username}`;
+      </script>
     
 </body>
 </html>

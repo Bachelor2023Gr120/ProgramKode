@@ -94,7 +94,11 @@ body{
   .login-box form .btn-primary:active {
     transform:translateY(1px);
   }
-  
+  .logo-img{
+    margin-top: 15%; 
+    max-height: 40px; 
+    max-width: 50px;
+  }
 
 
   @media screen and (max-width: 768px) {
@@ -112,5 +116,11 @@ body{
       left: 50%;
       transform: translateX(-50%);
       margin-top: 55%;
+    }
+    .logo-img{
+      max-height: 45px; 
+      max-width: 55px;
+      margin-top: 1%; 
+      margin-left: 15%; 
     }
   }

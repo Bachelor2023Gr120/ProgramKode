@@ -76,11 +76,23 @@ body{
 	background-color: #0af021;
   color: #000000;
 }
+.logo-img{
+  margin-top: 15%; 
+  max-height: 40px; 
+  max-width: 50px;
+}
+
 
 @media only screen and (max-width: 768px) {
   .options{
     margin: auto;
     margin-top: 5%;
     width: 90%;
+  }
+  .logo-img{
+    max-height: 45px; 
+    max-width: 55px;
+    margin-top: 1%; 
+    margin-left: 15%; 
   }
 }

@@ -24,7 +24,6 @@ body{
 .page-container {
   position: relative;
 }
-
 .grid-containers{
   display: flex;
   flex-direction: row;
@@ -59,11 +58,22 @@ body{
  font-size:4ch;
  margin: 30px;
 }
+.logo-img{
+  margin-top: 15%; 
+  max-height: 40px; 
+  max-width: 50px;
+}
 
 
 @media only screen and (max-width: 768px) {
   .grid-containers {
     flex-direction: column;
+  }
+  .logo-img{
+    max-height: 45px; 
+    max-width: 55px;
+    margin-top: 1%; 
+    margin-left: 15%; 
   }
 }
 

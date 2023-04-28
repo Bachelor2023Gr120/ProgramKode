@@ -15,33 +15,42 @@
 
   <link rel="stylesheet" href="compareResultStyle.css">
   <script src="compareResult.js"></script>
-
-</head>
+  </head>
 <body>
-<nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="../Index.html">Logo</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li><a href="../Index.html">Home</a></li>
-              <li class="active"><a href="../Pages/Workspace.php">Workspace</a></li>
-              <li><a href="../Pages/about.html">About</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-            <li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-    
   
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a href="../index.php" >
+          <img class="logo-img" src="../Images/logo.png" alt="Card image">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.php">Home</a></li>
+          <li><a href="../Pages/Workspace.php">Workspace</a></li>
+          <li><a href="../Pages/about.html">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <?php
+          if(isset($_SESSION['user_id'])) {
+              // User is logged in, display username and Logout button
+              echo '<li><a href="#"><span style="margin:0; padding: 0;"id="username-display"></span></a></li>';
+              echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
+          } else {
+              // User is not logged in, display Login button
+              echo '<li><a href="../Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+          }
+          ?>          
+        </ul>
+      </div>
+    </div>
+  </nav>
  
     <form class="content" id="content">
       <h1>Compare test results</h1>
@@ -66,6 +75,10 @@
     <canvas id="chart"></canvas>
   </div>
   
-
+      <script>
+        const Username = "<?php echo $_SESSION['name']; ?>";
+        const usernameDisplay = document.getElementById("username-display");
+        usernameDisplay.textContent = `${Username}`;
+      </script>
 </body>
 </html>

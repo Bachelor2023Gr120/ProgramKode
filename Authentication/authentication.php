@@ -40,9 +40,9 @@ else{  //if not alert the massege and keep the user in the same page!
     echo "<script>if(confirm('Login failed. Invalid email or password.'))
            {document.location.href='../Pages/login-form.html'};</script>";
            // https://stackoverflow.com/questions/39408498/next-page-by-clicking-ok-on-alert-box  
+           
+// https://phppot.com/php/php-login-script-with-session/
+// https://www.tutorialspoint.com/php/php_login_example.htm
 } 
 ?>
 
-
-// https://phppot.com/php/php-login-script-with-session/
-// https://www.tutorialspoint.com/php/php_login_example.htm
