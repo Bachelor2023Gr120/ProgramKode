@@ -1,8 +1,8 @@
 <?php      
         // Variables used in the database connection
-    $host = "localhost";  
+    $host = "192.168.1.25";  //Database serveren
     $email = "root";  
-    $password = '';  
+    $password = 'passord';  
     $db_name = "logindb";  
                     // Establishing the connection to the MySql/DB
     $con = mysqli_connect($host, $email, $password, $db_name);  
