@@ -7,6 +7,8 @@ body{
 
 .login-page{
   position: relative;
+  height: 30%;
+  margin-top: 0;
 }
 
 .text-only{
@@ -19,8 +21,18 @@ body{
   display: block;
   align-items: center;
   width: 40%;
+  height: 40%;
   margin: 10%;
   margin-left: 10%;
+  font-size: 1.8rem;
+  margin-top: 4%;
+}
+
+.page-logo{
+  display: block;
+  align-items: center;
+  width: 30%;
+  margin-left: 32%;
 }
 
 .login-box{
@@ -28,6 +40,7 @@ body{
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 15%;
 }
 
 .login-box form {
@@ -101,8 +114,13 @@ body{
   }
 
 
-  @media screen and (max-width: 768px) {
+
+  @media (max-width: 768px) {
+    .page-logo{
+      display:none;
+    }
     .login-box {
+      margin-top: 45%;
       flex-direction: column;
       align-items: center;
     }

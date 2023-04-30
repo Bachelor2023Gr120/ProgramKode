@@ -19,6 +19,7 @@ body{
   justify-content: center;
   width: 80%;
   margin: auto;
+  font-size:medium;
 }
 
 .page-container {
@@ -65,7 +66,7 @@ body{
 }
 
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .grid-containers {
     flex-direction: column;
   }

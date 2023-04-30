@@ -40,20 +40,45 @@ function initialize(questions) {
       const heading = document.createElement('h1');
       const para = document.createElement('p');
       const form = document.createElement('form');
+      const headingPageNr = document.createElement('h1');
 
-      const heading2 = document.createElement('h1');
-      heading2.setAttribute("class", "pageNr");
 
+      headingPageNr.setAttribute("class", "pageNr");
       heading.textContent = question.section;
-      para.textContent = question.sectionDescription;
-
       main.appendChild(section);
-      section.appendChild(heading);
-      section.appendChild(para);
-      section.appendChild(form);
-      section.appendChild(heading2);
 
+      section.appendChild(heading)
+
+
+      if(question.sectionDescription){
+        const sectionTipContainer = document.createElement('h3');    
+        sectionTipContainer.style.display = 'inline-block';
+        sectionTipContainer.innerText = '?';
+        heading.textContent += '  '; // To add a space 
+        section.appendChild(heading).appendChild(sectionTipContainer);
     
+        para.setAttribute("class", "tipText");
+        para.style.display = 'none';
+        const pText = document.createTextNode(question.sectionDescription);
+        para.appendChild(pText);
+        section.appendChild(para);
+    
+        sectionTipContainer.setAttribute("class", "tip-container");
+    
+        sectionTipContainer.addEventListener('mouseover', () => {
+          para.style.display = 'block';
+        });
+    
+        sectionTipContainer.addEventListener('mouseout', () => {
+          para.style.display = 'none';
+        });
+
+      }
+    
+
+
+      section.appendChild(form);
+      section.appendChild(headingPageNr);
 
 
       for (let i = 0; i < question.questionsList.length; i++) {
@@ -61,10 +86,8 @@ function initialize(questions) {
         form.appendChild(questionContainer);
         
         if(question.questionsList[i].Tips){
-          const tipContainer = document.createElement('p');
-
+          const tipContainer = document.createElement('h3');
           const tipTitle = document.createElement('h1');
-          tipTitle.setAttribute("class", "tip-title");
           const tTitle = document.createTextNode(question.questionsList[i].TipsTitle);
           tipTitle.appendChild(tTitle);
           questionContainer.appendChild(tipTitle);
@@ -92,13 +115,10 @@ function initialize(questions) {
           tipContainer.addEventListener('mouseout', () => {
             tipText.style.display = 'none';
           });
+
         }
 
-        heading2.textContent = questions.indexOf(question) + 1 +"/"+questions.length;
-        const qTitle = document.createElement('h2');
-        const qTitleText = document.createTextNode(question.questionsList[i].questionTitle);
-        qTitle.appendChild(qTitleText);
-        form.appendChild(qTitle);
+        headingPageNr.textContent = questions.indexOf(question) + 1 +"/"+questions.length;
 
         const q = document.createElement('p');
         const qText = document.createTextNode(question.questionsList[i].q);
@@ -201,10 +221,10 @@ function initialize(questions) {
       
         currentQuestionIndex++;
             if (currentQuestionIndex < questions.length) {
+              window.scrollTo(0, 0);
               showQuestion(questions[currentQuestionIndex]);
             } else {
-
-              window.location.href = "../Results/display-result.php";
+              window.location.href = "../Results/displayResult.php";
               createJSONFile(userAnswers,Username);
             }
       }
@@ -217,8 +237,3 @@ function initialize(questions) {
 
 
 }
-
-
-
-
-

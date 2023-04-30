@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results Display</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  type="image/x-icon" href="../images/logo.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="displayResultStyle.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -17,7 +17,7 @@
     <script src="displayResult.js"></script>
     </head>
 
-<body onload="window.scroll({ top: 0,left: 0,behavior: 'smooth' });"> 
+<body> 
   
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -71,7 +71,7 @@
           <p id="chart-description"></p>
           <p id="instruction-text" style="text-align: start; justify-content: center;"></p>
 
-            <div class="charts">
+            <div class="charts" id="charts"  style="display: none;">
                 <canvas class="bar-chart" id="chart" width="940" height="620" style="display: block; height: 660px; width: 420px;"></canvas>
                 <canvas class="donut-chart" id="donut-chart" width="940" height="620" style="display: block; height: 660px; width: 420px;"></canvas>
             </div>

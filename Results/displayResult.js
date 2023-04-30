@@ -7,7 +7,6 @@ function buttonCreate() {
           button.innerText = 'Compare';
           button.id = 'CompareButton';
 
-          // Attach the "click" event to your button
           button.addEventListener('click', () => {
             location.href='./compareResult.php';
           })
@@ -21,32 +20,14 @@ function checkFile() {
           alert('Please choose a file.');
           
         } else {
-          document.getElementById('Results').innerHTML = 'Compliance Report';
+          document.getElementById('Results').innerHTML = 'Your Questionnaire Results<br><br>';
           document.getElementById('chart-description').innerHTML = ChartDescription;
           document.getElementById('instruction-text').innerHTML = instructionTextt;
           DisplayResults();
           document.getElementById('Compare').innerHTML = text;
           buttonCreate();
           document.getElementById('file-reader').style.display = 'none';
-          
-          document.getElementById('show-instructions-btn').style.display = 'block';
-          document.getElementById('show-instructions-txt').style.display = 'block';
-
-          const instructionBox = document.getElementById("instruction-box");
-          const showInstructionsBtn = document.getElementById("show-instructions-btn");
-          const closeInstructionsBtn = document.getElementById("close-instructions-btn");
-          //const instructionText = document.getElementById("instruction-text");
-          showInstructionsBtn.addEventListener("click", function() {
-            instructionBox.style.display = "block";
-            //instructionText.innerHTML = instructionTextt;
-            document.getElementById('show-instructions-btn').style.display = 'none';
-            document.getElementById('show-instructions-txt').style.display = 'none';
-          });
-          closeInstructionsBtn.addEventListener("click", function() {
-            instructionBox.style.display = "none";
-            document.getElementById('show-instructions-btn').style.display = 'block';
-            document.getElementById('show-instructions-txt').style.display = 'block';
-          });
+          document.getElementById('charts').style.display = 'flex';
         }
   }
   
@@ -73,58 +54,62 @@ function DisplayResults1(index) {
 
     let section = Object.keys(data)[index];
     let questions = data[section];
-
+   
     let questionFile = '../questions/Questions.json';
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          let questionsData = JSON.parse(xhr.responseText);
-          let sectionTitle = questionsData[index].section;
-          let questionsList = questionsData[index].questionsList;
 
-          let sectionDiv = document.createElement('div');
-          sectionDiv.classList.add('section');
-          let sectionTitleDiv = document.createElement('h2');
-          sectionTitleDiv.innerText = sectionTitle;
-          sectionDiv.appendChild(sectionTitleDiv);
-
-          let questionsDiv = document.createElement('div');
-          questionsDiv.classList.add('questions');
-          for (let i = 0; i < questionsList.length; i++) {
-            let questionDiv = document.createElement('div');
-            questionDiv.classList.add('question');
-            let questionTitleDiv = document.createElement('h4');
-            questionTitleDiv.innerHTML = questionsList[i].q + '<br>';
-            questionDiv.appendChild(questionTitleDiv);
-
-            let answer = questions[i]; //Read wrong data!!!
-            let answerDiv = document.createElement('div');
-            answerDiv.classList.add('answer');
-            if (answer == "1") {
-              answerDiv.innerHTML = '<p>Yes</p>';
-            } else if (answer == "0.5") {
-              answerDiv.innerHTML = '<p>Partial</p>';
-            } else {
-              answerDiv.innerHTML = '<p>No</p>';
-            }
-            questionDiv.appendChild(answerDiv);
-            questionsDiv.appendChild(questionDiv);
-          }
-
-          sectionDiv.appendChild(questionsDiv);
-          resultDiv.innerHTML = '';
-          resultDiv.appendChild(sectionDiv);
-        } else {
-          console.error('Error: ' + xhr.status);
+    fetch(questionFile)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('File connection was not ok');
         }
-      }
-    }
-    xhr.open('GET', questionFile, true);
-    xhr.send();
+        return response.json();
+      })
+      .then(questionsData => {
+        let sectionTitle = questionsData[index].section;
+        let questionsList = questionsData[index].questionsList;
+
+        let sectionDiv = document.createElement('div');
+        sectionDiv.classList.add('section');
+        let sectionTitleDiv = document.createElement('h2');
+        sectionTitleDiv.innerText = sectionTitle;
+        sectionDiv.appendChild(sectionTitleDiv);
+
+        let questionsDiv = document.createElement('div');
+        questionsDiv.classList.add('questions');
+        for (let i = 0; i < questionsList.length; i++) {
+          let questionDiv = document.createElement('div');
+          questionDiv.classList.add('question');
+          let questionTitleDiv = document.createElement('h4');
+          questionTitleDiv.innerHTML = questionsList[i].q + '<br>';
+          questionDiv.appendChild(questionTitleDiv);
+
+         
+          
+          let answer = questions[i+1]; 
+          let answerDiv = document.createElement('div');
+          answerDiv.classList.add('answer');
+          if (answer == "0") {
+            answerDiv.innerHTML = '<p>No</p>';
+          } else if (answer == "0.5") {
+            answerDiv.innerHTML = '<p>Partial</p>';
+          } else {
+            answerDiv.innerHTML = '<p>Yes</p>';
+          }
+          questionDiv.appendChild(answerDiv);
+          questionsDiv.appendChild(questionDiv);
+        }
+
+        sectionDiv.appendChild(questionsDiv);
+        resultDiv.innerHTML = '';
+        resultDiv.appendChild(sectionDiv);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   }
   fileReader.readAsText(file);
 }
+
 
 
 

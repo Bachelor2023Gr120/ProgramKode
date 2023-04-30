@@ -2,17 +2,16 @@
     
     { 
      "section": "A.5 Information security policies", 
-     "sectionDescription": "Annex 5 is about the management role in information security, primarily in procedures ", 
+     "sectionDescription": "Annex 5 is about the management role in information security, primarily in procedures.", 
      "questionsList": 
      [
      {
-        "questionTitle":"Policies for information security ",
         "q":"1. Does the company have a set of security policies that is defined and approved by management?"
-    },
+     },
      {
-        "questionTitle":" Review of the policies for information security",
+        
         "q":"2. Does the company review the policies when major changes occur in the company?"
-    }
+     }
     ]
     },
 
