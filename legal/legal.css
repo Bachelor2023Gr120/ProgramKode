@@ -130,4 +130,10 @@ body  {
         transform: translate(-50%, 0);
       }
       
+      .logo-img{
+        margin-top: 15%; 
+        max-height: 40px; 
+        max-width: 50px;
+      }
+      
   
