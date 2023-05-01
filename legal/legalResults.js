@@ -59,8 +59,8 @@ function DisplayResults1(index) {
     let section = Object.keys(data)[index];
     let questions = data[section];
 
-    var filName =document.getElementById("file").value;
-    console.log(filname);
+    let questionFile = 'legalFinanceQuestions.json';
+
   /*
     if(filName =='Healthcare_%'){
       let questionFile = 'legalHealthQuestions.json';
@@ -71,7 +71,6 @@ function DisplayResults1(index) {
     //}
 
 
-    let questionFile = 'legalFinanceQuestions.json';
 
 
   
