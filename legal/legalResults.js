@@ -25,7 +25,7 @@ function checkFile() {
           document.getElementById('instruction-text').innerHTML = instructionTextt;
           DisplayResults();
           document.getElementById('Compare').innerHTML = text;
-          buttonCreate();
+      //    buttonCreate();
           document.getElementById('file-reader').style.display = 'none';
           document.getElementById('charts').style.display = 'flex';
         }
