@@ -327,54 +327,6 @@ function ResultsChart(data) {
             }
         });
 
-
-
-        var testDataSet =[totalCompliant,totalpartialCompliant,totalNonCompliant];
-
-    
-var trytotalCtx = document.getElementById("donut-chart").getContext("2d");
-      
-        var trytotalChart = new Chart(totalCtx, {
-          type: "doughnut",
-          data: {
-            labels: ["C","NC" ,"PC"],
-            datasets: [
-              {
-                label: "Total",
-                data: testDataSet,
-                backgroundColor: totalColors,
-              }
-            ]
-          },
-          options:{
-            plugins: {
-              datalabels: {
-                formatter: (value) => {                  
-                  let percentage = value.toFixed(2) + "%";
-                  return percentage;                    
-                },
-                color: '#fff',
-              }
-            },
-            title: {
-              display: true,
-              text: "Total Compliance Results",
-              fontSize: 16,
-              fontColor: "#000",
-              fontStyle: "bold"
-                
-              },
-              legend: {
-                position: "bottom",
-                labels: {
-                  fontColor: 'black',
-                  fontSize: 13,
-                  fontWeight: 'bold'
-                }
-              }
-
-            }
-        });
         
 
 }
