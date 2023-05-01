@@ -62,7 +62,7 @@ function DisplayResults1(index) {
     let questionFile;
 
     let bok=filName.charAt(0);
-    console.log(bok + " " + filName);
+    //console.log(bok + " " + filName);
     //alert(filName);
 
   
