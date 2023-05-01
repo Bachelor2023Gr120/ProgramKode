@@ -132,7 +132,6 @@ function ResultsChart(data) {
       var sectionData = data[section];
       var numQuestions = Object.keys(sectionData).length;
 
-      console.log(numQuestions); //testing
 
 
       var numCompliant=0;
@@ -186,7 +185,7 @@ function ResultsChart(data) {
             datalabels: {          
               formatter: function(value) {
                 if(value){
-                  var percentage = value.toFixed(2)+ "%";
+                  var percentage = value.toFixed(0)+ "%";
                   return percentage;
                 }else
                 return null;
