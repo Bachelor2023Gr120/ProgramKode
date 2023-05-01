@@ -29,8 +29,8 @@ function checkFile() {
           document.getElementById('file-reader').style.display = 'none';
           document.getElementById('charts').style.display = 'flex';
 
-          var fu1 = document.getElementById("FileUpload1");
-          alert("You selected " + fu1.value);
+          fake_path=document.getElementById('FileUpload1').value
+          alert(fake_path.split("\\").pop())
 
         }
   }
