@@ -167,14 +167,14 @@ fetch('legalHealthQuestions.json')
     
 
       function createJSONFile(answers, Username) {
-          const jsonString = JSON.stringify(answers, null, 2, "Healthcare"); // add 2-space indentation for readability
+          const jsonString = JSON.stringify(answers, null, 2); // add 2-space indentation for readability
           const formattedJsonString = jsonString.replace(/(?:\r\n|\r|\n)/g, '\n'); // add newline after each section
           const blob = new Blob([formattedJsonString], { type: 'application/json' });
         
           const url = URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = url;
-          link.download = `${Username}_${new Date().toLocaleDateString()}.json`;
+          link.download = `Healthcare ${Username}_${new Date().toLocaleDateString()}.json`;
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
