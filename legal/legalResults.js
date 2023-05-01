@@ -132,7 +132,7 @@ function ResultsChart(data) {
       var sectionData = data[section];
       var numQuestions = Object.keys(sectionData).length;
 
-      consol.log(numQuestions);
+      console.log(numQuestions); 
 
 
       var numCompliant=0;
