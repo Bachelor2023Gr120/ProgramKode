@@ -48,7 +48,7 @@
     </div>
   </nav>
 
-<div class="d-flex p-2">
+<div class="container">
   <div class="options">
     <h1>Legal regulations</h1>
     <p>Questionaire based on what information security laws a organization is required to follow</p>
