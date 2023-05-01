@@ -170,9 +170,9 @@ function ResultsChart(data) {
     console.log("partial nr" + totalpartialCompliant);
     console.log("non compliant nr" + totalNonCompliant);
 
-    var totalcompliantNumber = totalCompliant.length();
-    var totalNonCompliantNumber = totalNonCompliant.lenght();
-    var totalpartialCompliantNumber = totalpartialCompliant.lenght();
+    var totalcompliantNumber = totalCompliant.length;
+    var totalNonCompliantNumber = totalNonCompliant.lenght;
+    var totalpartialCompliantNumber = totalpartialCompliant.lenght;
     
     var totalData = [totalCompliant, totalNonCompliant,totalpartialCompliant];
 
