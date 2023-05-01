@@ -76,7 +76,7 @@ function DisplayResults1(index) {
 
         let questionsDiv = document.createElement('div');
         questionsDiv.classList.add('questions');
-        for (let i = 0; i < questionsList.th; i++) {
+        for (let i = 0; i < questionsList.length; i++) {
           let questionDiv = document.createElement('div');
           questionDiv.classList.add('question');
           let questionTitleDiv = document.createElement('h4');
