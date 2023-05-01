@@ -73,7 +73,7 @@ function DisplayResults1(index) {
     
     if(filName=='Finance%'){
       let questionFile = 'legalHealthQuestions.json';
-   /}
+   }
 
 
 
