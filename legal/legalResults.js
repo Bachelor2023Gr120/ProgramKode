@@ -66,11 +66,11 @@ function DisplayResults1(index) {
     //alert(filName);
 
   
-    if(bok =="H"){
+    if(bok === 'H' ){
       let questionFile = 'legalHealthQuestions.json';
     }
     
-    if(bok=="F"){
+    if(bok === 'F'){
       let questionFile = 'legalFinanceQuestions.json';
    }
 
