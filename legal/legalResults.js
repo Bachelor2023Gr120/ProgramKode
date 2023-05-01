@@ -296,8 +296,8 @@ function ResultsChart(data) {
             plugins: {
               datalabels: {
                 formatter: (value) => {                  
-                  let percentage = value/numQuestions.toFixed(2);
-                  return percentage;                    
+                  let percentage = value.toFixed(2);
+                  return percentage/numQuestions.toFixed(0);                    
                 },
                 color: '#fff',
               }
