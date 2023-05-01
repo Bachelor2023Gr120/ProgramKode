@@ -29,6 +29,8 @@ function checkFile() {
           document.getElementById('file-reader').style.display = 'none';
           document.getElementById('charts').style.display = 'flex';
 
+
+          var url = window.location.pathname;
           var filename = url.substring(url.lastIndexOf('/')+1);
           alert(filename);
 
