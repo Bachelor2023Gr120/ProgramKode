@@ -15,6 +15,10 @@
   
 
 <script>
+const Username = "<?php echo $_SESSION['name']; ?>";
+            const usernameDisplay = document.getElementById("username-display");
+                  usernameDisplay.textContent = `${Username}`;
+
 function healthcare(){
   var script = document.createElement('script');
   script.src = 'legalHealth.js';
@@ -29,9 +33,7 @@ function Finance(){
   head.appendChild(script);
 }
 
-const Username = "<?php echo $_SESSION['name']; ?>";
-        const usernameDisplay = document.getElementById("username-display");
-        usernameDisplay.textContent = `${Username}`;
+  
 </script>
 
 </head>
@@ -66,8 +68,7 @@ const Username = "<?php echo $_SESSION['name']; ?>";
               // User is not logged in, display Login button
               echo '<li><a href="../Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
           }
-          ?> 
-        
+          ?>          
         </ul>
       </div>
     </div>
