@@ -71,7 +71,7 @@ function DisplayResults1(index) {
     }
     
     if(bok=="F"){
-      let questionFile = 'legalHealthQuestions.json';
+      let questionFile = 'legalFinanceQuestions.json';
    }
 
 
