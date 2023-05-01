@@ -28,6 +28,10 @@ function checkFile() {
           buttonCreate();
           document.getElementById('file-reader').style.display = 'none';
           document.getElementById('charts').style.display = 'flex';
+
+          var filename = url.substring(url.lastIndexOf('/')+1);
+          alert(filename);
+
         }
   }
   
