@@ -52,10 +52,9 @@ body{
 
 
 .options{
-  height: 80%;
   margin: auto;
   margin-top: 5%;
-  width: 50%;
+  width: 45%;
   padding: 10px;
   border: solid;
 }
