@@ -148,13 +148,10 @@ function ResultsChart(data) {
       }
   
       var compliancePercent = numCompliant / numQuestions;
-      console.log("compliant nr" + numCompliant);
 
       var partialcompliancePercent = partialCompliant / numQuestions;
-      console.log("partial nr" + partialCompliant);
 
       var noncompliancePercent = noncompliance / numQuestions
-      console.log("non compliant nr" + noncompliance);
 
   
       complianceData.push(compliancePercent.toFixed(2)* 100);
@@ -169,6 +166,10 @@ function ResultsChart(data) {
       labels.push("A." + (i + 5));
       i++;
     }
+    console.log("compliant nr" + totalCompliant);
+    console.log("partial nr" + totalpartialCompliant);
+    console.log("non compliant nr" + totalNonCompliant);
+
     
     
     var totalData = [totalCompliant, totalNonCompliant,totalpartialCompliant];
