@@ -56,13 +56,20 @@ body{
   margin-top: 5%;
   width: 45%;
   padding: 10px;
-  border: solid;
   float: left;
 }
 .options > p{
   font-family: Arial, Helvetica, sans-serif;
   font-size:medium;
 }
+
+.options > .red{
+  background-color: red;
+}
+.options > .red:hover{
+  background-color: lightcoral;
+}
+
 
 .options > button{
   background-color: #078f15;
@@ -101,9 +108,7 @@ body{
   }
 }
 
-.red{
-  background-color: red;
-}
+
 .container{
   display: flex;
   border: 3px solid #fff;
