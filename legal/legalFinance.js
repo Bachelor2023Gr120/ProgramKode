@@ -174,7 +174,7 @@ fetch('legalFinanceQuestions.json')
           const url = URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = url;
-          link.download = `Healthcare_${Username}_${new Date().toLocaleDateString()}.json`;
+          link.download = `Finance_${Username}_${new Date().toLocaleDateString()}.json`;
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
