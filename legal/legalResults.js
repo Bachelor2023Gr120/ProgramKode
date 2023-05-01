@@ -20,11 +20,7 @@ function checkFile() {
           alert('Please choose a file.');
           
         } else {
-
-          var fake_path =document.getElementById('file').value
-          alert(fake_path.split("\\").pop())
-
-          document.getElementById('Results').innerHTML = 'Your Questionnaire Results<br><br>';
+           document.getElementById('Results').innerHTML = 'Your Questionnaire Results<br><br>';
           document.getElementById('chart-description').innerHTML = ChartDescription;
           document.getElementById('instruction-text').innerHTML = instructionTextt;
           DisplayResults();
@@ -61,13 +57,13 @@ function DisplayResults1(index) {
 
    // let questionFile = 'legalFinanceQuestions.json';
 
-    var filName=document.getElementById("file").value;
+    let filName=document.getElementById("file").value;
     filName =filName.split("\\").pop();
 
     console.log(filName);
     alert(filName);
 
-    var bok=filName.charAt(0);
+    let bok=filName.charAt(0);
   
     if(bok =="H"){
       let questionFile = 'legalHealthQuestions.json';
