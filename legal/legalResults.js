@@ -67,11 +67,11 @@ function DisplayResults1(index) {
     console.log(filName);
     alert(filName);
   
-    if(filName['0'] =='H%'){
+    if(filName[0] =='H%'){
       let questionFile = 'legalHealthQuestions.json';
     }
     
-    if(filName['0']=='F%'){
+    if(filName[0]=='F%'){
       let questionFile = 'legalHealthQuestions.json';
    }
 
