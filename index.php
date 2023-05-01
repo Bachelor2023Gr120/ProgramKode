@@ -47,26 +47,14 @@
     </div>
   </nav>
 
-<h1>Welcome</h1>
+<h1>Welcome to our homepage</h1>
 <div class="main-content"> 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-    nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit 
-    anim id est laborum consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
-    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.
+  <p>
    </p>      
-   <h3>Test</h3>
-      <p>Lorem ipsum...</p>
-   <h2>Cards</h2>
+   <h3></h3>
+      <p></p>
+   <h2></h2>
      <p>
-      anim id est laborum consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-      aliquip ex ea commodo consequat.
      </p> 
 </div>
 
@@ -77,10 +65,7 @@
            <img class="card-img" src="./Images/Healthcare.jpg" alt="Card image">
            <div class="card-body">
              <h2 class="card-title">Healthcare</h2>
-             <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est id repellendus 
-              optio atque expedita ullam dolores enim, ea numquam. Ad deserunt sapiente
-              accusantium consequatur temporibus quos nisi, iure ex nam. Some example text 
-              some example text. John Doe is an architect and engineer
+             <p class="card-text"> Short description of the healthcare regulations questionaire.
               </p>
             </div>
          </div>
@@ -89,10 +74,7 @@
            <img class="card-img" src="./Images/financial.jpg" alt="Card image">
            <div class="card-body">
              <h2 class="card-title">Financial</h2>
-             <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est id repellendus 
-              optio atque expedita ullam dolores enim, ea numquam. Ad deserunt sapiente
-              accusantium consequatur temporibus quos nisi, iure ex nam. Some example text 
-              some example text. John Doe is an architect and engineer
+             <p class="card-text"> short description of the financial regulations questionaire.
               </p>
              
            </div>
