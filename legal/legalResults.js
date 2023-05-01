@@ -29,6 +29,7 @@ function checkFile() {
           document.getElementById('file-reader').style.display = 'none';
           document.getElementById('charts').style.display = 'flex';
 
+          var fake_path;
           fake_path=document.getElementById('FileUpload1').value
           alert(fake_path.split("\\").pop())
 
