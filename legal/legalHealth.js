@@ -204,7 +204,7 @@ fetch('legalHealth.json')
               showQuestion(questions[currentQuestionIndex]);
             } else {
 
-              window.location.href = "../Results/display-result.php";
+              window.location.href = "../Results/displayResult.php";
               createJSONFile(userAnswers,Username);
             }
       }
