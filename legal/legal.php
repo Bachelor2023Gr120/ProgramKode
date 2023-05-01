@@ -76,7 +76,7 @@ function Finance(){
     <main>
       <h2>Choose sector</h2>
       <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Chooose Sector
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
           <li id="finance" onclick="Finance()"><a href="#">Finance</a></li>
