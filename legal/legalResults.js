@@ -166,12 +166,7 @@ function ResultsChart(data) {
       labels.push("A." + (i + 5));
       i++;
     }
-    console.log("compliant nr" + totalCompliant);
-    console.log("partial nr" + totalpartialCompliant);
-    console.log("non compliant nr" + totalNonCompliant);
-
-    
-    
+  
     var totalData = [totalCompliant, totalNonCompliant,totalpartialCompliant];
     var totalColors = ["green","red" ,"orange"];
   
