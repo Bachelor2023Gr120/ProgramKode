@@ -173,6 +173,8 @@ function ResultsChart(data) {
     
     
     var totalData = [totalCompliant, totalNonCompliant,totalpartialCompliant];
+
+    var totDataTest = [totalCompliant/numQuestions,totalNonCompliant/numQuestions,totalpartialCompliant/numQuestions];
     var totalColors = ["green","red" ,"orange"];
   
     var ctx = document.getElementById("chart").getContext("2d");
@@ -292,7 +294,7 @@ function ResultsChart(data) {
             datasets: [
               {
                 label: "Total",
-                data: totalData,
+                data: totDataTest,
                 backgroundColor: totalColors,
               }
             ]
