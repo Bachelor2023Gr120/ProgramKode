@@ -15,9 +15,6 @@
   
 
 <script>
-const Username = "<?php echo $_SESSION['name']; ?>";
-            const usernameDisplay = document.getElementById("username-display");
-                  usernameDisplay.textContent = `${Username}`;
 
 function healthcare(){
   var script = document.createElement('script');
@@ -90,7 +87,12 @@ function Finance(){
   </div>
 
 
+<script>
+  const Username = "<?php echo $_SESSION['name']; ?>";
+  const usernameDisplay = document.getElementById("username-display");
+  usernameDisplay.textContent = `${Username}`;
 
+</script>
   
 </body>
 </html>
