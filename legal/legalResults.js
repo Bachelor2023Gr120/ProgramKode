@@ -30,7 +30,7 @@ function checkFile() {
           document.getElementById('charts').style.display = 'flex';
 
           var fake_path;
-          fake_path=document.getElementById('FileUpload1').value
+          fake_path=document.getElementById('file').value
           alert(fake_path.split("\\").pop())
 
         }
