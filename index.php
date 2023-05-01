@@ -28,14 +28,15 @@
         <ul class="nav navbar-nav">
           <li><a href="./index.php">Home</a></li>
           <li><a href="./Pages/Workspace.php">Workspace</a></li>
-          <li><a href="./Pages/about.html">About</a></li>
+          <li><a href="./Pages/about.php">About</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <?php
           session_start();
           if(isset($_SESSION['user_id'])) {
               // User is logged in, display username and Logout button
-              echo '<li><a href="#"><span style="margin:0; padding: 0;"id="username-display"></span></a></li>';
+              echo '<li><a href="./AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+              echo '<li><a><span style="margin:0; padding: 0;"id="username-display"></span></a></li>';
               echo '<li><a href="./Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {
               // User is not logged in, display Login button
@@ -47,7 +48,7 @@
     </div>
   </nav>
 
-<h1>Welcome to our homepage</h1>
+<h1 style="font-weight: bold;">Welcome to CyberTest4You</h1>
 <div class="main-content"> 
   <p>
    </p>      
@@ -61,7 +62,7 @@
 
 <div class="page-container">
      <div class="grid-containers">
-         <div class="containers" onclick="location.href='./Pages/healthcare.html'">
+         <div class="containers" onclick="location.href='./Pages/healthcare.php'">
            <img class="card-img" src="./Images/Healthcare.jpg" alt="Card image">
            <div class="card-body">
              <h2 class="card-title">Healthcare</h2>
@@ -70,7 +71,7 @@
             </div>
          </div>
          
-         <div class="containers" onclick="location.href='./Pages/financial.html'">
+         <div class="containers" onclick="location.href='./Pages/financial.php'">
            <img class="card-img" src="./Images/financial.jpg" alt="Card image">
            <div class="card-body">
              <h2 class="card-title">Financial</h2>

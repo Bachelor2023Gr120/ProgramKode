@@ -1,0 +1,53 @@
+body{
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(194, 194, 194));
+    color: #000000;
+    text-align: center;
+    justify-content: center;    
+  }
+  .navbar {
+    background-color: #0c0c0f;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  .navbar-brand{
+    padding-right: 50px;
+  }
+
+  .dashboard {
+    color: #fff;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    max-width: 70%;
+    max-height: 90%;
+    width: 50%;
+    height: 650px;
+    background-color: #0c0c0f;
+    box-shadow: #0c0c0f;
+    margin: auto;
+    margin-top: 4%;
+  }
+
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7%;
+    background-color: #0c0c0f;
+    padding: 10px;
+  }
+  .controls>button,p{
+    padding: 20px;
+    margin: 5%;
+    margin-bottom: 1%;
+  }
+#formContainer{
+  float: right;
+  margin-right: 4%;
+  margin-bottom: 4%;
+}
+
+
+  button, input {
+    color: #000000;
+  }

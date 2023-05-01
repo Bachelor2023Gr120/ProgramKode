@@ -15,27 +15,41 @@ body{
   padding-right: 50px;
 }
 
-/*
-.main-content{
-  width:100%;
-  padding: 1%;
-}
-
-.main-content > img{
-  width: 30%;
-  margin:3%;
-  margin-top:0;
-  border-radius: 15%;
-  box-shadow: #0c0c0f;
-  
-}*/
 
 .items {
   display: block;
   text-align: center;
-  font-size: 15px;
   margin: 10%;
-  margin-top: 0;
+  margin-top: 5%;
+  font-size: large;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  font-size: larger;
+  width: 100%;
+  height: 90%;
+}
+
+.aboutContant {
+  margin-top: 2%;
+  margin-left: 10%;
+  flex: 1;
+  padding: 1rem;
+  width: 90%;
+  text-align: left;
+}
+
+.contactInfo {
+  max-width: 20%;
+  max-height: 30%;
+  flex: 1;
+  border: 1px solid #3b3b3b;
+  border-style: inset;
+  border-radius: 10px;
 }
  
 
@@ -89,7 +103,11 @@ body{
   max-height: 40px; 
   max-width: 50px;
 }
-
+.page-logo{
+  display: block;
+  align-items: center;
+  width: 30%;
+}
 
 @media (max-width: 768px) {
   .options{
@@ -106,9 +124,19 @@ body{
     margin-top: 1%; 
     margin-left: 15%; 
   }
-}
+  .page-logo{
+    display:none;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutContant {
+    margin-left: 0;
+    text-align: center;
+  }
+  .contactInfo {
+    max-width: 90%;
 
-
-.container{
-  display: flex;
+  }
 }

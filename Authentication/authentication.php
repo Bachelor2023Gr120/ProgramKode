@@ -6,21 +6,9 @@ include('connection.php');
 $email = $_POST['email'];  
 $password = $_POST['password'];  
 
-
-///
-/// We can delete this!!!!!!!!!!!!!
-///
-//to prevent from mysqli injection 
-/* 
-$email = stripcslashes($email);  
-$password = stripcslashes($password);  
-$email = mysqli_real_escape_string($con, $email);  
-$password = mysqli_real_escape_string($con, $password);  
-*/
-
 // SQL query that will select everythin from the specific user- 
 // (if the user exist in the DB)
-$sql = "select * from login where email = '$email' and password = '$password'"; 
+$sql = "select * from user where email = '$email' and password = '$password'"; 
 $result = mysqli_query($con, $sql);  //Execute the query, ('$con' if connected)
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC); // Return the user data  
 $count = mysqli_num_rows($result); // Uses to bring the number of rows returned by our query
@@ -38,7 +26,7 @@ if($count == 1){  // if there is data/row
 }  
 else{  //if not alert the massege and keep the user in the same page!
     echo "<script>if(confirm('Login failed. Invalid email or password.'))
-           {document.location.href='../Pages/login-form.html'};</script>";
+           {document.location.href='../Pages/login-form.php'};</script>";
            // https://stackoverflow.com/questions/39408498/next-page-by-clicking-ok-on-alert-box  
            
 // https://phppot.com/php/php-login-script-with-session/
