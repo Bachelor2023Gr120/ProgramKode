@@ -55,8 +55,7 @@ function DisplayResults1(index) {
     let section = Object.keys(data)[index];
     let questions = data[section];
    
-    var fake_path;
-          fake_path=document.getElementById('file').value
+    var fake_path =document.getElementById('file').value
           alert(fake_path.split("\\").pop())
 
     if(fake_path=='healthcare_%'){
