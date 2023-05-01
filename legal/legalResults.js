@@ -61,7 +61,7 @@ function DisplayResults1(index) {
 
    // let questionFile = 'legalFinanceQuestions.json';
 
-    let filName=document.getElementById("file").value;
+    var filName=document.getElementById("file").value;
     filName =filName.split("\\").pop();
 
     console.log(filName);
