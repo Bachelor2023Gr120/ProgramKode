@@ -148,10 +148,14 @@ function ResultsChart(data) {
       }
   
       var compliancePercent = numCompliant / numQuestions;
+      console.log("compliant nr" + numCompliant);
 
       var partialcompliancePercent = partialCompliant / numQuestions;
-  
+      console.log("partial nr" + partialCompliant);
+
       var noncompliancePercent = noncompliance / numQuestions
+      console.log("non compliant nr" + noncompliance);
+
   
       complianceData.push(compliancePercent.toFixed(2)* 100);
       noncomplianceData.push(noncompliancePercent.toFixed(2)* 100);
