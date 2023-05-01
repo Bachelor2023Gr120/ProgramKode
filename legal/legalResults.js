@@ -163,7 +163,7 @@ function ResultsChart(data) {
       totalNonCompliant +=  noncompliance;
 
   
-      labels.push("Section." + (i + 5));
+      labels.push("Section." + (i+1));
       i++;
     }
   
