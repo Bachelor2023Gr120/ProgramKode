@@ -60,10 +60,11 @@ function DisplayResults1(index) {
     let filName=document.getElementById("file").value;
     filName =filName.split("\\").pop();
 
-    console.log(filName);
-    alert(filName);
 
     let bok=filName.charAt(0);
+    console.log(bok + " " + filName);
+    //alert(filName);
+
   
     if(bok =="H"){
       let questionFile = 'legalHealthQuestions.json';
