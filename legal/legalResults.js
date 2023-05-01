@@ -29,6 +29,8 @@ function checkFile() {
           document.getElementById('file-reader').style.display = 'none';
           document.getElementById('charts').style.display = 'flex';
 
+
+
           var fake_path;
           fake_path=document.getElementById('file').value
           alert(fake_path.split("\\").pop())
@@ -60,7 +62,15 @@ function DisplayResults1(index) {
     let section = Object.keys(data)[index];
     let questions = data[section];
    
-    let questionFile = 'legalHealthQuestions.json';
+
+    if(fake_path=='healthcare_%'){
+      let questionFile = 'legalHealthQuestions.json';
+    }
+    if(fake_path=='finance%'){
+      let questionFile = 'legalFinanceQuestions.json';
+
+    }
+    
 
     fetch(questionFile)
       .then(response => {
