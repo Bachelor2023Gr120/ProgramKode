@@ -67,7 +67,7 @@ function DisplayResults1(index) {
     console.log(filName);
     alert(filName);
 
-    var bok=filname.charAt(0);
+    var bok=filName.charAt(0);
   
     if(bok =='H'){
       let questionFile = 'legalHealthQuestions.json';
