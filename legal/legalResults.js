@@ -202,7 +202,7 @@ function ResultsChart(data) {
             datalabels: {          
               formatter: function(value) {
                 if(value){
-                  var percentage = value/numQuestions.toFixed(0);
+                  var percentage = value.toFixed(0) + "%";
                   return percentage;
                 }else
                 return null;
@@ -296,7 +296,7 @@ function ResultsChart(data) {
             plugins: {
               datalabels: {
                 formatter: (value) => {                  
-                  let percentage = value.toFixed(2) + "%";
+                  let percentage = value/numQuestions.toFixed(2);
                   return percentage;                    
                 },
                 color: '#fff',
