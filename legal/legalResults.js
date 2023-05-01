@@ -55,7 +55,7 @@ function DisplayResults1(index) {
     let section = Object.keys(data)[index];
     let questions = data[section];
    
-    let questionFile = 'legalhealth.json';
+    let questionFile = 'legalHealthQuestions.json';
 
     fetch(questionFile)
       .then(response => {
