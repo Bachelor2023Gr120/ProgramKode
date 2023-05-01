@@ -61,6 +61,8 @@ function DisplayResults1(index) {
 
     var filName=document.getElementById('file').value;
 
+    console.log(filName);
+
     if(filName=='Healthcare_%'){
       let questionFile = 'legalHealthQuestions.json';
     }
