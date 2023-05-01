@@ -174,7 +174,7 @@ fetch('legalHealthQuestions.json')
           const url = URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = url;
-          link.download = `Healthcare ${Username}_${new Date().toLocaleDateString()}.json`;
+          link.download = `Healthcare_${Username}_${new Date().toLocaleDateString()}.json`;
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
