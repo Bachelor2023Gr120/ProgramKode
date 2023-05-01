@@ -11,8 +11,7 @@
      {
         "questionTitle": "",
         "q" : "Does the organisation assess whether it is necessary to implement more comprehensive measures than those described in the Code?"
-     }
-     ,
+     },
      {
         "questionTitle": "",
         "q" : "Do all employees in the organisation undergo continuous training regarding the requirement to fulfil the duty of confidentiality, information security and data protection?"
@@ -231,7 +230,7 @@
             "TipsTitle": "",
             "Tips" : "Examples of the requirement: Personal health data filing system for therapeutic purposes must have functionality to ensure that the control can be carried out effectively.",
             "questionTitle": "",
-            "q" : "Does the organisation’s management ensure that regular checks are carried out to determine who has gained electronic access?"
+            "q" : "Does the organisation's management ensure that regular checks are carried out to determine who has gained electronic access?"
         },
         {
             "questionTitle": "",
@@ -239,7 +238,7 @@
         },
         {
             "questionTitle": "",
-            "q" : "Is the organisation’s management informed if checks lead to a suspicion that unauthorised access has taken place?"
+            "q" : "Is the organisation's management informed if checks lead to a suspicion that unauthorised access has taken place?"
         },
         {
             "questionTitle": "",

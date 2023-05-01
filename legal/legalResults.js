@@ -297,7 +297,7 @@ function ResultsChart(data) {
               datalabels: {
                 formatter: (value) => {                  
                   let percentage = value.toFixed(2);
-                  return percentage/numQuestions.toFixed(0);                    
+                  return percentage;                    
                 },
                 color: '#fff',
               }
