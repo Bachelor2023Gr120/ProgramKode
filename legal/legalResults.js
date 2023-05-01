@@ -166,6 +166,9 @@ function ResultsChart(data) {
       labels.push("A." + (i + 5));
       i++;
     }
+    console.log("compliant nr" + totalCompliant);
+    console.log("partial nr" + totalpartialCompliant);
+    console.log("non compliant nr" + totalNonCompliant);
 
     
     
@@ -346,7 +349,7 @@ var trytotalCtx = document.getElementById("donut-chart").getContext("2d");
           options:{
             plugins: {
               datalabels: {
-                formatter: (value/numQuestions) => {                  
+                formatter: (value) => {                  
                   let percentage = value.toFixed(2) + "%";
                   return percentage;                    
                 },
