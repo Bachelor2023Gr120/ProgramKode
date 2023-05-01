@@ -292,7 +292,7 @@ function ResultsChart(data) {
             datasets: [
               {
                 label: "Total",
-                data: totalData,
+                data: totalData/numQuestions,
                 backgroundColor: totalColors,
               }
             ]
@@ -301,7 +301,7 @@ function ResultsChart(data) {
             plugins: {
               datalabels: {
                 formatter: (value) => {                  
-                  let percentage = value/numQuestions.toFixed(2) + "%";
+                  let percentage = value.toFixed(2) + "%";
                   return percentage;                    
                 },
                 color: '#fff',
