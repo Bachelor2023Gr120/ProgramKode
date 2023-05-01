@@ -292,7 +292,7 @@ function ResultsChart(data) {
             datasets: [
               {
                 label: "Total",
-                data: totalData.length(),
+                data: totalData,
                 backgroundColor: totalColors,
               }
             ]
