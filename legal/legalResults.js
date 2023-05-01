@@ -59,7 +59,7 @@ function DisplayResults1(index) {
 
     let filName=document.getElementById("file").value;
     filName =filName.split("\\").pop();
-
+    let questionFile;
 
     let bok=filName.charAt(0);
     console.log(bok + " " + filName);
@@ -67,11 +67,11 @@ function DisplayResults1(index) {
 
   
     if(bok === 'H' ){
-      let questionFile = 'legalHealthQuestions.json';
+       questionFile = 'legalHealthQuestions.json';
     }
     
     if(bok === 'F'){
-      let questionFile = 'legalFinanceQuestions.json';
+       questionFile = 'legalFinanceQuestions.json';
    }
 
 
