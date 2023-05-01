@@ -2,6 +2,8 @@ const ChartDescription="The bar chart displays your compliance percentage for ea
 const text ="    Our platform offers a valuable feature that allows users to effectively compare and contrast two distinct test results.This functionality proves to be incredibly useful in identifying any modifications or adjustments made since the last test, thus enabling individuals to gain a deeper understanding of their progress over time. By utilizing this tool, users can easily track their development and make informed decisions based on their testing data.";
 const instructionTextt = "<b>Instruction for using this webpage:</b><br>- To view your answers again, click on the corresponding bar in the chart to display them.<br>- To hide any displayed data, click its name. e.g. Partial-Compliance!";
 
+var gFile;
+
 function buttonCreate() {
           const button = document.createElement('button');
           button.innerText = 'Compare';
@@ -22,8 +24,9 @@ function checkFile() {
         } else {
 
           var fake_path =document.getElementById('file').value
+          gFile=fake_path;
           alert(fake_path.split("\\").pop())
-          
+
           document.getElementById('Results').innerHTML = 'Your Questionnaire Results<br><br>';
           document.getElementById('chart-description').innerHTML = ChartDescription;
           document.getElementById('instruction-text').innerHTML = instructionTextt;
@@ -59,10 +62,10 @@ function DisplayResults1(index) {
     let section = Object.keys(data)[index];
     let questions = data[section];
 
-    if(fake_path=='healthcare_%'){
+    if(gFile=='healthcare_%'){
       let questionFile = 'legalHealthQuestions.json';
     }
-    if(fake_path=='finance%'){
+    if(gFile=='finance%'){
       let questionFile = 'legalFinanceQuestions.json';
 
     }
