@@ -170,15 +170,9 @@ function ResultsChart(data) {
     console.log("partial nr" + totalpartialCompliant);
     console.log("non compliant nr" + totalNonCompliant);
 
-    var totalcompliantNumber = totalCompliant.length;
-    var totalNonCompliantNumber = totalNonCompliant.lenght;
-    var totalpartialCompliantNumber = totalpartialCompliant.lenght;
+    
     
     var totalData = [totalCompliant, totalNonCompliant,totalpartialCompliant];
-
-    var totalDataTesting = [totalcompliantNumber/numQuestions,
-    totalNonCompliantNumber/numQuestions,
-    totalpartialCompliantNumber/numQuestions];
     var totalColors = ["green","red" ,"orange"];
   
     var ctx = document.getElementById("chart").getContext("2d");
@@ -298,7 +292,7 @@ function ResultsChart(data) {
             datasets: [
               {
                 label: "Total",
-                data: totalDataTesting,
+                data: totaldata,
                 backgroundColor: totalColors,
               }
             ]
