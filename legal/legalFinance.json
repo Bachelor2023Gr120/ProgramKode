@@ -2,20 +2,20 @@
     { 
      "section": "1", 
      "sectionDescription": "", 
-     "questionsList": 
+     "questionsList":
      [
-     {
-        "questionTitle":"Policies for Health ",
-        "q":" The institution shall establish overarching objectives, strategies and security requirements for its ICT activity Law: § 2?"
-    },
-     {
-        "questionTitle":" ",
-        "q":"The institution should prepare a description of each process, and describe how responsibility for administration, procurement, development, operation, system maintenance, protection of data and discontinuation is to be discharged in a satisfactory manner Law: § 2?"
-    },
-    {
-        "questionTitle" : "",
-        "q": "The institution shall have guidelines that ensure that ICT activities that are outsourced comply with the requirements in Section 12? Law: § 2"
-    }    ,
+        {
+            "questionTitle":"Policies for Health ",
+            "q":" The institution shall establish overarching objectives, strategies and security requirements for its ICT activity Law: § 2?"
+        },
+        {
+            "questionTitle":" ",
+            "q":"The institution should prepare a description of each process, and describe how responsibility for administration, procurement, development, operation, system maintenance, protection of data and discontinuation is to be discharged in a satisfactory manner Law: § 2?"
+        },
+        {
+            "questionTitle" : "",
+            "q": "The institution shall have guidelines that ensure that ICT activities that are outsourced comply with the requirements in Section 12? Law: § 2"
+        },
         {
             "questionTitle" : "",
             "q": "The institution shall have designated people responsible for the various parts of the ICT activity. The term 'designated person' means a function or position? Law: § 2"
@@ -44,9 +44,8 @@
             "questionTitle" : "",
             "q": "The institution shall have written procedures for procurement, development, maintenance and testing of its ICT systems. The ICT systems shall not be put into operation until authorization to do so is given? Law: 6"
         }
-    ]
-    }
-    ,
+        ]
+    },
     {
      "section": "2",  
      "sectionDescription": "", 
@@ -93,4 +92,5 @@
             "q": ""
         }
      ]
+    } 
 ]
