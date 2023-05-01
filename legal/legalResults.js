@@ -20,6 +20,10 @@ function checkFile() {
           alert('Please choose a file.');
           
         } else {
+
+          var fake_path =document.getElementById('file').value
+          alert(fake_path.split("\\").pop())
+          
           document.getElementById('Results').innerHTML = 'Your Questionnaire Results<br><br>';
           document.getElementById('chart-description').innerHTML = ChartDescription;
           document.getElementById('instruction-text').innerHTML = instructionTextt;
@@ -54,9 +58,6 @@ function DisplayResults1(index) {
 
     let section = Object.keys(data)[index];
     let questions = data[section];
-   
-    var fake_path =document.getElementById('file').value
-          alert(fake_path.split("\\").pop())
 
     if(fake_path=='healthcare_%'){
       let questionFile = 'legalHealthQuestions.json';
