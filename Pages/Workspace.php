@@ -48,42 +48,51 @@
     </div>
   </nav>
 
-
-<div class="options">
-    <h1> Questionnaire</h1>
-    <p>
-      This questionnaire is based on <b>Annex A</b> of the <b>ISO27001</b> standard and consists of 
-      <b>14</b> categories of security controls, each with several control measures presented in the 
-      form of questions.
-      The questionnaire includes a total of  <b>114</b> questions, and we kindly request that you respond 
-      to each question with one of the available answers. It is essential to answer 
-      every question, and leaving any question unanswered is not permitted.
-      Once the questionnaire is completed, a  <b>JSON</b> file will be downloaded. The downloaded file 
-      can be utilized in subsequent steps of the model.
-    </p>
-    <button onclick="location.href='../questions/questionList.php'">Start Questionnaire</button>
+<div class="container">
+  <div class="options">
+    <h1>Legal regulations</h1>
+    <p>Questionaire based on what information security laws a organization is required to follow</p>
+    <button class="red" onclick="location.href='../legal/legal.php'">Start Questionaire Legal regulations</button>
     <br><br>
-    <h1>Display your questionnaire Result</h1>
-    <p>
-      This tool helps organizations assess their compliance level with the <b>ISO27001</b> standard. 
-      To get started, simply take our questionnaire, which is presented above. Once completed, 
-      you can upload the <b>JSON</b> file and view the results displayed in easy-to-understand graphs. 
-      These graphs will provide you with a clear understanding of your organization's compliance 
-      level with <b>ISO27001</b>, allowing you to take the necessary steps to improve your organization's
-       security posture.
-    </p>
-    <button onclick="location.href='../Results/displayResult.php'">Display</button>
-    <br><br>
-    <h1>Compare your questionnaire Results</h1>
-    <p>
-      The comparison tool allows you to easily compare the results of your current and previous 
-      questionnaires in an interactive graph. By analyzing the data side by side, you can quickly 
-      identify areas of improvement and see the progress you've made over time.
-    </p>
-    <button onclick="location.href='../Results/compareResult.php'">Compare</button>
+    <h1>Display results for legal Questionaire</h1>
+    <p>This shows how you did in both  in both bar chart as well as in a doughnut chart</p>
+    <button class="red" onclick="location.href='../legal/legalShowResults.php'">Show Results Legal regulations</button>
+  </div>
+  <div class="options">
+      <h1> Questionnaire</h1>
+      <p>
+        This questionnaire is based on <b>Annex A</b> of the <b>ISO27001</b> standard and consists of 
+        <b>14</b> categories of security controls, each with several control measures presented in the 
+        form of questions.
+        The questionnaire includes a total of  <b>114</b> questions, and we kindly request that you respond 
+        to each question with one of the available answers. It is essential to answer 
+        every question, and leaving any question unanswered is not permitted.
+        Once the questionnaire is completed, a  <b>JSON</b> file will be downloaded. The downloaded file 
+        can be utilized in subsequent steps of the model.
+      </p>
+      <button onclick="location.href='../questions/questionList.php'">Start Questionnaire</button>
+      <br><br>
+      <h1>Display your questionnaire Result</h1>
+      <p>
+        This tool helps organizations assess their compliance level with the <b>ISO27001</b> standard. 
+        To get started, simply take our questionnaire, which is presented above. Once completed, 
+        you can upload the <b>JSON</b> file and view the results displayed in easy-to-understand graphs. 
+        These graphs will provide you with a clear understanding of your organization's compliance 
+        level with <b>ISO27001</b>, allowing you to take the necessary steps to improve your organization's
+        security posture.
+      </p>
+      <button onclick="location.href='../Results/displayResult.php'">Display</button>
+      <br><br>
+      <h1>Compare your questionnaire Results</h1>
+      <p>
+        The comparison tool allows you to easily compare the results of your current and previous 
+        questionnaires in an interactive graph. By analyzing the data side by side, you can quickly 
+        identify areas of improvement and see the progress you've made over time.
+      </p>
+      <button onclick="location.href='../Results/compareResult.php'">Compare</button>
 
+  </div>
 </div>
-
       <script>
         const Username = "<?php echo $_SESSION['name']; ?>";
         const usernameDisplay = document.getElementById("username-display");
