@@ -69,11 +69,11 @@ function DisplayResults1(index) {
 
     var bok=filName.charAt(0);
   
-    if(bok =='H'){
+    if(bok =="H"){
       let questionFile = 'legalHealthQuestions.json';
     }
     
-    if(bok=='F'){
+    if(bok=="F"){
       let questionFile = 'legalHealthQuestions.json';
    }
 
