@@ -1,5 +1,8 @@
 // based on the code of QuestionList
-fetch('legalFinance.json')
+
+
+
+fetch('legalFinanceQuestions.json')
   .then( response => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -25,8 +28,11 @@ fetch('legalFinance.json')
 
 
   let currentQuestionIndex = 0;
+  var teller =0;
 
     function showQuestion(question) {
+
+
       const main = document.querySelector('main');
       main.innerHTML = ''; // clear previous content
       const section = document.createElement('section');
@@ -45,11 +51,10 @@ fetch('legalFinance.json')
       section.appendChild(para);
       section.appendChild(form);
       section.appendChild(heading2);
-
-    
-
+  
 
       for (let i = 0; i < question.questionsList.length; i++) {
+        teller +=1;
         const questionContainer = document.createElement('div');
         form.appendChild(questionContainer);
         
@@ -69,6 +74,7 @@ fetch('legalFinance.json')
           questionContainer.appendChild(tipContainer);
         
           const tipText = document.createElement('p');
+          const nr = i;
           const tText = document.createTextNode(question.questionsList[i].Tips);
         
           tipText.style.display = 'none';
@@ -93,7 +99,8 @@ fetch('legalFinance.json')
         qTitle.appendChild(qTitleText);
         form.appendChild(qTitle);
 
-        const q = document.createElement('p');
+        const q = document.createElement('p');    
+        q.innerHTML = teller + ". ";
         const qText = document.createTextNode(question.questionsList[i].q);
         q.appendChild(qText);
         form.appendChild(q);
@@ -167,7 +174,7 @@ fetch('legalFinance.json')
           const url = URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = url;
-          link.download = `Finance_${Username}_${new Date().toLocaleDateString()}.json`;
+          link.download = `Healthcare_${Username}_${new Date().toLocaleDateString()}.json`;
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
@@ -197,7 +204,7 @@ fetch('legalFinance.json')
               showQuestion(questions[currentQuestionIndex]);
             } else {
 
-              window.location.href = "../Results/display-result.php";
+              window.location.href = "legalShowResults.php";
               createJSONFile(userAnswers,Username);
             }
       }
