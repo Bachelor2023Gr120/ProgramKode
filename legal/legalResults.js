@@ -59,21 +59,21 @@ function DisplayResults1(index) {
     let section = Object.keys(data)[index];
     let questions = data[section];
 
-    let questionFile = 'legalFinanceQuestions.json';
+   // let questionFile = 'legalFinanceQuestions.json';
 
     let filName=document.getElementById("file").value;
     filName =filName.split("\\").pop();
 
     console.log(filName);
 
-  /*
-    if(filName =='Healthcare_%'){
+  
+    if(filName =='Healthcare%'){
       let questionFile = 'legalHealthQuestions.json';
     }
-    */
-    //if(filName=='Finance%'){
-   //   let questionFile = 'legalHealthQuestions.json';
-    //}
+    
+    if(filName=='Finance%'){
+      let questionFile = 'legalHealthQuestions.json';
+   /}
 
 
 
