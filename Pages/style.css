@@ -52,6 +52,7 @@ body{
 
 
 .options{
+  height: 80%;
   margin: auto;
   margin-top: 5%;
   width: 50%;
@@ -102,4 +103,7 @@ body{
 
 .red{
   background-color: red;
+}
+.container{
+flex-wrap: wrap;
 }
