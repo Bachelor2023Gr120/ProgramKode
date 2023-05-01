@@ -76,7 +76,7 @@ function DisplayResults1(index) {
 
         let questionsDiv = document.createElement('div');
         questionsDiv.classList.add('questions');
-        for (let i = 0; i < questionsList.length; i++) {
+        for (let i = 0; i < questionsList.th; i++) {
           let questionDiv = document.createElement('div');
           questionDiv.classList.add('question');
           let questionTitleDiv = document.createElement('h4');
@@ -131,6 +131,9 @@ function ResultsChart(data) {
     for (var section in data) {
       var sectionData = data[section];
       var numQuestions = Object.keys(sectionData).length;
+
+      consol.log(numQuestions);
+
 
       var numCompliant=0;
       var partialCompliant = 0;
