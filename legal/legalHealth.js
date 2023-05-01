@@ -1,4 +1,7 @@
 // based on the code of QuestionList
+
+
+
 fetch('legalHealth.json')
   .then( response => {
     if (!response.ok) {
@@ -25,8 +28,11 @@ fetch('legalHealth.json')
 
 
   let currentQuestionIndex = 0;
+  var teller =0;
 
     function showQuestion(question) {
+
+
       const main = document.querySelector('main');
       main.innerHTML = ''; // clear previous content
       const section = document.createElement('section');
@@ -45,11 +51,10 @@ fetch('legalHealth.json')
       section.appendChild(para);
       section.appendChild(form);
       section.appendChild(heading2);
-
-    
-
+  
 
       for (let i = 0; i < question.questionsList.length; i++) {
+        teller +=1;
         const questionContainer = document.createElement('div');
         form.appendChild(questionContainer);
         
@@ -69,6 +74,7 @@ fetch('legalHealth.json')
           questionContainer.appendChild(tipContainer);
         
           const tipText = document.createElement('p');
+          const nr = i;
           const tText = document.createTextNode(question.questionsList[i].Tips);
         
           tipText.style.display = 'none';
@@ -93,7 +99,8 @@ fetch('legalHealth.json')
         qTitle.appendChild(qTitleText);
         form.appendChild(qTitle);
 
-        const q = document.createElement('p');
+        const q = document.createElement('p');    
+        q.innerHTML = teller + ". ";
         const qText = document.createTextNode(question.questionsList[i].q);
         q.appendChild(qText);
         form.appendChild(q);
