@@ -59,17 +59,20 @@ function DisplayResults1(index) {
     let section = Object.keys(data)[index];
     let questions = data[section];
 
-    let questionFile = 'legalFinanceQuestions.json';
-
-
-    /*
-    if(filName=='Healthcare_%'){
+  /*
+    if(filName =='Healthcare_%'){
       let questionFile = 'legalHealthQuestions.json';
     }
     */
     //if(filName=='Finance%'){
    //   let questionFile = 'legalHealthQuestions.json';
     //}
+
+
+    let questionFile = 'legalFinanceQuestions.json';
+
+
+  
     
 
     fetch(questionFile)
