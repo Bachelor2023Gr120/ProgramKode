@@ -66,12 +66,14 @@ function DisplayResults1(index) {
 
     console.log(filName);
     alert(filName);
+
+    var bok=filname.charAt(0);
   
-    if(filName[0] =='H'){
+    if(bok =='H'){
       let questionFile = 'legalHealthQuestions.json';
     }
     
-    if(filName[0]=='F'){
+    if(bok=='F'){
       let questionFile = 'legalHealthQuestions.json';
    }
 
