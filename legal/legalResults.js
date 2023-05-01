@@ -59,6 +59,8 @@ function DisplayResults1(index) {
     let section = Object.keys(data)[index];
     let questions = data[section];
 
+    let questionFile = 'legalFinanceQuestions.json';
+
 
     /*
     if(filName=='Healthcare_%'){
@@ -66,7 +68,7 @@ function DisplayResults1(index) {
     }
     */
     //if(filName=='Finance%'){
-      let questionFile = 'legalFinanceQuestions.json';
+   //   let questionFile = 'legalHealthQuestions.json';
     //}
     
 
