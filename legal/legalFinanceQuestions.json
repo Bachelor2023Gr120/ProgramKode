@@ -1,48 +1,48 @@
 [
     { 
      "section": "1", 
-     "sectionDescription": "", 
+     "sectionDescription": "The statements are from 'the regulations on the use of information and communication technology' developed by the Norwegian Ministry of finance. Check the box that is appropriate for your company.", 
      "questionsList":
      [
         {
             "questionTitle":"",
-            "q":" The institution shall establish overarching objectives, strategies and security requirements for its ICT activity Law: § 2?"
+            "q":" The institution shall establish overarching objectives, strategies and security requirements for its ICT activity Law: § 2"
         },
         {
             "questionTitle":" ",
-            "q":"The institution should prepare a description of each process, and describe how responsibility for administration, procurement, development, operation, system maintenance, protection of data and discontinuation is to be discharged in a satisfactory manner Law: § 2?"
+            "q":"The institution should prepare a description of each process, and describe how responsibility for administration, procurement, development, operation, system maintenance, protection of data and discontinuation is to be discharged in a satisfactory manner Law: § 2"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall have guidelines that ensure that ICT activities that are outsourced comply with the requirements in Section 12? Law: § 2"
+            "q": "The institution shall have guidelines that ensure that ICT activities that are outsourced comply with the requirements in Section 12 Law: § 2"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall have designated people responsible for the various parts of the ICT activity. The term 'designated person' means a function or position? Law: § 2"
+            "q": "The institution shall have designated people responsible for the various parts of the ICT activity. The term 'designated person' means a function or position Law: § 2"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall establish criteria for acceptable risk in connection with its use of ICT systems? Law: § 3"
+            "q": "The institution shall establish criteria for acceptable risk in connection with its use of ICT systems Law: § 3"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall have a documented process for performing risk analysis of its ICT activities. The process shall clearly define responsibilities and it shall include follow-up measures to be taken because of the risk analysis? Law: § 3"
+            "q": "The institution shall have a documented process for performing risk analysis of its ICT activities. The process shall clearly define responsibilities and it shall include follow-up measures to be taken because of the risk analysis Law: § 3"
         },
         {
             "questionTitle" : "",
-            "q": "At least annually, and in case of changes which influence its ICT security, the institution shall perform risk analyses to ensure that risk is managed within acceptable limits relative to the institution's business. The result of the risk analyses shall be documented? Law: § 3"
+            "q": "At least annually, and in case of changes which influence its ICT security, the institution shall perform risk analyses to ensure that risk is managed within acceptable limits relative to the institution's business. The result of the risk analyses shall be documented Law: § 3"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall prepare procedures for ensuring that equipment, systems and information of significance for the institution's business, see section 1, are protected against damage, misuse, unauthorized access and change, and vandalism? Law: § 5"
+            "q": "The institution shall prepare procedures for ensuring that equipment, systems and information of significance for the institution's business, see section 1, are protected against damage, misuse, unauthorized access and change, and vandalism Law: § 5"
         },
         {
             "questionTitle" : "",
-            "q": "The procedures shall also contain guidelines for the granting, modification, revocation and control of access to the ICT systems. As far as is practicable, security requirements shall be quantifiable? Law: § 5"
+            "q": "The procedures shall also contain guidelines for the granting, modification, revocation and control of access to the ICT systems. As far as is practicable, security requirements shall be quantifiable Law: § 5"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall have written procedures for procurement, development, maintenance and testing of its ICT systems. The ICT systems shall not be put into operation until authorization to do so is given? Law §: 6"
+            "q": "The institution shall have written procedures for procurement, development, maintenance and testing of its ICT systems. The ICT systems shall not be put into operation until authorization to do so is given Law §: 6"
         }
         ]
     },
@@ -53,23 +53,23 @@
      [
         {
             "questionTitle" : "",
-            "q": "The institution shall ensure that its ICT systems are maintained and managed in a way that ensures stable, planned and predictable operation. There shall be documented procedures for system maintenance? Law § 7"
+            "q": "The institution shall ensure that its ICT systems are maintained and managed in a way that ensures stable, planned and predictable operation. There shall be documented procedures for system maintenance Law § 7"
         },
         {
             "questionTitle" : "",
-            "q": "The operation of the ICT shall be based on written procedures that ensure complete, timely and correct data processing and data storage? Law: §  8"
+            "q": "The operation of the ICT shall be based on written procedures that ensure complete, timely and correct data processing and data storage Law: §  8"
         },
         {
             "questionTitle" : "",
-            "q": "The ICT operation, which shall be documented, shall ensure that ICT systems are available as specified in written requirements. To avoid disruption in the ICT systems or their environment that may negatively influence the written requirements, regular analyses and corresponding measures shall be implemented? Law: § 8"
+            "q": "The ICT operation, which shall be documented, shall ensure that ICT systems are available as specified in written requirements. To avoid disruption in the ICT systems or their environment that may negatively influence the written requirements, regular analyses and corresponding measures shall be implemented Law: § 8"
         },
         {
             "questionTitle" : "",
-            "q": "Incidents that lead to a material reduction in functionality as a result of breach of confidentiality (data protection), integrity (protection against unauthorized changes) or availability of ICT systems and/or data, shall be reported to the Financial Supervisory Authority of Norway. Reporting should normally cover events that the institution itself categorizes as very serious or critical but may also cover incidents that reveal vulnerabilities in applications, architecture, infrastructure or defense mechanisms? Law: § 9"
+            "q": "Incidents that lead to a material reduction in functionality as a result of breach of confidentiality (data protection), integrity (protection against unauthorized changes) or availability of ICT systems and/or data, shall be reported to the Financial Supervisory Authority of Norway. Reporting should normally cover events that the institution itself categorizes as very serious or critical but may also cover incidents that reveal vulnerabilities in applications, architecture, infrastructure or defense mechanisms Law: § 9"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall have a documented contingency plan which shall be activated if ICT operations cannot be upheld due to a contingency. The term 'contingency' means unintended events which cause a disruption such that the institution’s ICT operation is unable to continue with the regular set of resources? Law: § 11"
+            "q": "The institution shall have a documented contingency plan which shall be activated if ICT operations cannot be upheld due to a contingency. The term 'contingency' means unintended events which cause a disruption such that the institution’s ICT operation is unable to continue with the regular set of resources Law: § 11"
         },
         {
             "questionTitle" : "",
