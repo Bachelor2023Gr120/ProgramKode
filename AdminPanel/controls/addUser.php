@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $admin = isset($_POST['admin']) ? 1 : 0;
 
 
-    $conn = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
+    $conn = new PDO("mysql:host=192.168.1.25; dbname='usercompanydb'",'root', 'passord');
 
     // prepare the query with placeholders
     $stmt = $conn->prepare("INSERT INTO `user` ( `name`, `email`, `password`, `company_id`, `admin`) 
