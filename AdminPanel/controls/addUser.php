@@ -1,6 +1,6 @@
 <h2>Add User</h2>
 <hr>
-<form method="POST" class="form-row" action="./controls/addUser.php">
+<form method="POST" class="form-row" action="addUser.php">
 
             <div class="form-group col-md-6" >
                 <label for="name">Name:</label>
