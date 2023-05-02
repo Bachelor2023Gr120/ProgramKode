@@ -6,43 +6,43 @@
      [
         {
             "questionTitle":"",
-            "q":" The institution shall establish overarching objectives, strategies and security requirements for its ICT activity Law: § 2"
+            "q":" The institution shall establish overarching objectives, strategies and security requirements for its ICT activity section in law: § 2"
         },
         {
             "questionTitle":" ",
-            "q":"The institution should prepare a description of each process, and describe how responsibility for administration, procurement, development, operation, system maintenance, protection of data and discontinuation is to be discharged in a satisfactory manner Law: § 2"
+            "q":"The institution should prepare a description of each process, and describe how responsibility for administration, procurement, development, operation, system maintenance, protection of data and discontinuation is to be discharged in a satisfactory manner section in law: § 2"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall have guidelines that ensure that ICT activities that are outsourced comply with the requirements in Section 12 Law: § 2"
+            "q": "The institution shall have guidelines that ensure that ICT activities that are outsourced comply with the requirements in Section 12 section in law: § 2"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall have designated people responsible for the various parts of the ICT activity. The term 'designated person' means a function or position Law: § 2"
+            "q": "The institution shall have designated people responsible for the various parts of the ICT activity. The term 'designated person' means a function or position section in law: § 2"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall establish criteria for acceptable risk in connection with its use of ICT systems Law: § 3"
+            "q": "The institution shall establish criteria for acceptable risk in connection with its use of ICT systems section in law: § 3"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall have a documented process for performing risk analysis of its ICT activities. The process shall clearly define responsibilities and it shall include follow-up measures to be taken because of the risk analysis Law: § 3"
+            "q": "The institution shall have a documented process for performing risk analysis of its ICT activities. The process shall clearly define responsibilities and it shall include follow-up measures to be taken because of the risk analysis section in law: § 3"
         },
         {
             "questionTitle" : "",
-            "q": "At least annually, and in case of changes which influence its ICT security, the institution shall perform risk analyses to ensure that risk is managed within acceptable limits relative to the institution's business. The result of the risk analyses shall be documented Law: § 3"
+            "q": "At least annually, and in case of changes which influence its ICT security, the institution shall perform risk analyses to ensure that risk is managed within acceptable limits relative to the institution's business. The result of the risk analyses shall be documented section in law: § 3"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall prepare procedures for ensuring that equipment, systems and information of significance for the institution's business, see section 1, are protected against damage, misuse, unauthorized access and change, and vandalism Law: § 5"
+            "q": "The institution shall prepare procedures for ensuring that equipment, systems and information of significance for the institution's business, see section 1, are protected against damage, misuse, unauthorized access and change, and vandalism section in law: § 5"
         },
         {
             "questionTitle" : "",
-            "q": "The procedures shall also contain guidelines for the granting, modification, revocation and control of access to the ICT systems. As far as is practicable, security requirements shall be quantifiable Law: § 5"
+            "q": "The procedures shall also contain guidelines for the granting, modification, revocation and control of access to the ICT systems. As far as is practicable, security requirements shall be quantifiable section in law: § 5"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall have written procedures for procurement, development, maintenance and testing of its ICT systems. The ICT systems shall not be put into operation until authorization to do so is given Law §: 6"
+            "q": "The institution shall have written procedures for procurement, development, maintenance and testing of its ICT systems. The ICT systems shall not be put into operation until authorization to do so is given section in law §: 6"
         }
         ]
     },
@@ -53,39 +53,39 @@
      [
         {
             "questionTitle" : "",
-            "q": "The institution shall ensure that its ICT systems are maintained and managed in a way that ensures stable, planned and predictable operation. There shall be documented procedures for system maintenance Law § 7"
+            "q": "The institution shall ensure that its ICT systems are maintained and managed in a way that ensures stable, planned and predictable operation. There shall be documented procedures for system maintenance section in law § 7"
         },
         {
             "questionTitle" : "",
-            "q": "The operation of the ICT shall be based on written procedures that ensure complete, timely and correct data processing and data storage Law: §  8"
+            "q": "The operation of the ICT shall be based on written procedures that ensure complete, timely and correct data processing and data storage section in law: §  8"
         },
         {
             "questionTitle" : "",
-            "q": "The ICT operation, which shall be documented, shall ensure that ICT systems are available as specified in written requirements. To avoid disruption in the ICT systems or their environment that may negatively influence the written requirements, regular analyses and corresponding measures shall be implemented Law: § 8"
+            "q": "The ICT operation, which shall be documented, shall ensure that ICT systems are available as specified in written requirements. To avoid disruption in the ICT systems or their environment that may negatively influence the written requirements, regular analyses and corresponding measures shall be implemented section in law: § 8"
         },
         {
             "questionTitle" : "",
-            "q": "Incidents that lead to a material reduction in functionality as a result of breach of confidentiality (data protection), integrity (protection against unauthorized changes) or availability of ICT systems and/or data, shall be reported to the Financial Supervisory Authority of Norway. Reporting should normally cover events that the institution itself categorizes as very serious or critical but may also cover incidents that reveal vulnerabilities in applications, architecture, infrastructure or defense mechanisms Law: § 9"
+            "q": "Incidents that lead to a material reduction in functionality as a result of breach of confidentiality (data protection), integrity (protection against unauthorized changes) or availability of ICT systems and/or data, shall be reported to the Financial Supervisory Authority of Norway. Reporting should normally cover events that the institution itself categorizes as very serious or critical but may also cover incidents that reveal vulnerabilities in applications, architecture, infrastructure or defense mechanisms section in law: § 9"
         },
         {
             "questionTitle" : "",
-            "q": "The institution shall have a documented contingency plan which shall be activated if ICT operations cannot be upheld due to a contingency. The term 'contingency' means unintended events which cause a disruption such that the institution’s ICT operation is unable to continue with the regular set of resources Law: § 11"
+            "q": "The institution shall have a documented contingency plan which shall be activated if ICT operations cannot be upheld due to a contingency. The term 'contingency' means unintended events which cause a disruption such that the institution’s ICT operation is unable to continue with the regular set of resources section in law: § 11"
         },
         {
             "questionTitle" : "",
-            "q": "The contingency plan must as a minimum include: - an overview of ICT systems included in the contingency plan  - a description of the contingency solution  - clear-cut criteria for activation of the contingency solution  - the acceptable downtime in case of disruption of operations before the contingency solution is activated  - procedures containing the actions necessary to restore the ICT operation  - an overview of responsibilities and procedures upon activation of the contingency solution - directions for informing affected employees, suppliers, customers, public authorities and media.  Training, exercises and tests shall be conducted, at least once a year, on a scale that provides assurance that the contingency solution functions as intended. The results shall be documented. Law: § 11 "
+            "q": "The contingency plan must as a minimum include: - an overview of ICT systems included in the contingency plan  - a description of the contingency solution  - clear-cut criteria for activation of the contingency solution  - the acceptable downtime in case of disruption of operations before the contingency solution is activated  - procedures containing the actions necessary to restore the ICT operation  - an overview of responsibilities and procedures upon activation of the contingency solution - directions for informing affected employees, suppliers, customers, public authorities and media.  Training, exercises and tests shall be conducted, at least once a year, on a scale that provides assurance that the contingency solution functions as intended. The results shall be documented. section in law: § 11 "
         },
         {
             "questionTitle" : "",
-            "q": "The institution is responsible for ensuring that its ICT activity complies with all requirements imposed by these regulations. This responsibility also applies where all or parts of the ICT activity are outsourced. The supplier shall be contractually committed to supplying services that are consistently compliant with the ICT regulation. The agreement must ensure that the institution under supervision is given the right to control and audit activities carried out by the service provider under the agreement. The agreement shall also provide for secure management of confidential information. Law: § 12"
+            "q": "The institution is responsible for ensuring that its ICT activity complies with all requirements imposed by these regulations. This responsibility also applies where all or parts of the ICT activity are outsourced. The supplier shall be contractually committed to supplying services that are consistently compliant with the ICT regulation. The agreement must ensure that the institution under supervision is given the right to control and audit activities carried out by the service provider under the agreement. The agreement shall also provide for secure management of confidential information. section in law: § 12"
         },
         {
             "questionTitle" : "",
-            "q": "The agreement shall further ensure that the Financial Supervisory Authority of Norway has access to information from the service provider and has a right to inspect the service provider, if the Financial Supervisory Authority of Norway deems this to be necessary as part of its supervision of the institution. Law: § 12"
+            "q": "The agreement shall further ensure that the Financial Supervisory Authority of Norway has access to information from the service provider and has a right to inspect the service provider, if the Financial Supervisory Authority of Norway deems this to be necessary as part of its supervision of the institution. section in law: § 12"
         },
         {
             "questionTitle" : "",
-            "q": "A complete up-to-date overview shall exist of the organization, equipment, ICT systems and significant factors related to ICT activities. Up-to-date documentation shall exist of each ICT system that supports the business, verifying compliance with the requirements of these regulations. Law:§ 13"
+            "q": "A complete up-to-date overview shall exist of the organization, equipment, ICT systems and significant factors related to ICT activities. Up-to-date documentation shall exist of each ICT system that supports the business, verifying compliance with the requirements of these regulations. section in law:§ 13"
         }
 
      ]
