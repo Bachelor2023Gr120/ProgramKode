@@ -5,7 +5,7 @@
      "questionsList":
      [
         {
-            "questionTitle":"Policies for Health ",
+            "questionTitle":"",
             "q":" The institution shall establish overarching objectives, strategies and security requirements for its ICT activity Law: § 2?"
         },
         {
@@ -57,7 +57,7 @@
         },
         {
             "questionTitle" : "",
-            "q": "The operation of the ICT shall be based on written procedures that ensure complete, timely and correct data processing and data storage? Law: 8"
+            "q": "The operation of the ICT shall be based on written procedures that ensure complete, timely and correct data processing and data storage? Law: §  8"
         },
         {
             "questionTitle" : "",
