@@ -108,7 +108,7 @@ fetch('legalFinanceQuestions.json')
         form.appendChild(qTitle);
 
         const q = document.createElement('p');    
-        q.innerHTML = teller + ". " + select[teller] <"<br>" ;
+        q.innerHTML = teller + ". " + select[teller] + "<br>" ;
         const qText = document.createTextNode(question.questionsList[i].q);
         q.appendChild(qText);
         form.appendChild(q);
