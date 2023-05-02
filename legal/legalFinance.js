@@ -1,7 +1,7 @@
 // based on the code of QuestionList
 
 
-var select=["section in law: § 2", "section in law: § 2","section in law: § 2"
+const select=["section in law: § 2", "section in law: § 2","section in law: § 2"
 ,"section in law: § 2", "section in law: § 3", "section in law: § 3", "section in law: § 3", 
   "section in law: § 5", "section in law: § 5", "section in law §: 6", "section in law § 7"
   , "section in law: §  8", "section in law: § 8", "section in law: § 9", "section in law: § 11",
