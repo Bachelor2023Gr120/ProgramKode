@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // prepare the query with placeholders
     $stmt = $conn->prepare("INSERT INTO `usercompanydb.user` ( `name`, `email`, `password`, `company_id`, `admin`) 
-                                    VALUES ( :name, :email, :password, :company_id, :admin)");
+                                    VALUES ( :name, :email, :password, :company_id, :admin);");
 
     // bind the values to the placeholders
     $stmt->bindParam(':name', $name);
