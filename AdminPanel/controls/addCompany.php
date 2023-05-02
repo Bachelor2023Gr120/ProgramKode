@@ -1,5 +1,5 @@
 
-<form method="POST" class="form-row" action="./controls/addCompany.php">
+<form method="POST" class="form-row" action="../controls/addCompany.php">
 <h2>Add Company</h2>
 <hr>
 
