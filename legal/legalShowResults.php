@@ -48,7 +48,7 @@
         <?php
           if(isset($_SESSION['user_id'])) {
               // User is logged in, display username and Logout button
-              echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+            //  echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
               echo '<li><a><span style="margin:0; padding: 0;"id="username"></span></a></li>';
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {

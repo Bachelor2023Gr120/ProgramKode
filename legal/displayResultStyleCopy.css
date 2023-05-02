@@ -6,6 +6,7 @@ body{
   }
 
 .navbar {
+  font-size: medium;
     background-color: #0c0c0f;
     margin-bottom: 0;
     border-radius: 0;
