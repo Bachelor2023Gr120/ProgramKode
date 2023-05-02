@@ -1,7 +1,7 @@
 // based on the code of QuestionList
 
 
-var section=["section in law: § 2", "section in law: § 2","section in law: § 2"
+var select=["section in law: § 2", "section in law: § 2","section in law: § 2"
 ,"section in law: § 2", "section in law: § 3", "section in law: § 3", "section in law: § 3", 
   "section in law: § 5", "section in law: § 5", "section in law §: 6", "section in law § 7"
   , "section in law: §  8", "section in law: § 8", "section in law: § 9", "section in law: § 11",
@@ -110,8 +110,8 @@ fetch('legalFinanceQuestions.json')
         const q = document.createElement('p');    
         q.innerHTML = teller + ". ";
         const qText = document.createTextNode(question.questionsList[i].q);
+        q.innerHTML+= "<br><br>" + select[teller];
         q.appendChild(qText);
-        q.innerHTML+= "<br><br>" + section[teller];
         form.appendChild(q);
         const radioButtons = createQuestionForm(i);
         form.appendChild(radioButtons);
