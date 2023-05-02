@@ -52,14 +52,14 @@ function Finance(){
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a href="../index.php">Home</a></li>
-          <li><a href="../Pages/Workspace.php">Workspace</a></li>
+          <li><a href="../Pages/TestingCenter.php">Testing Center</a></li>
           <li><a href="../Pages/about.php">About</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
         <?php
           if(isset($_SESSION['user_id'])) {
               // User is logged in, display username and Logout button
-            //  echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+              //echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
               echo '<li><a><span style="margin:0; padding: 0;"id="username"></span></a></li>';
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {
@@ -77,7 +77,7 @@ function Finance(){
     <main>
       <h2>Choose sector</h2>
       <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Chooose Sector
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose Sector
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
           <li id="finance" onclick="Finance()"><a>Finance</a></li>
