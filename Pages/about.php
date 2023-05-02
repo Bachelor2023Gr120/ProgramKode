@@ -94,7 +94,7 @@
                                 <hr>
                                 <h2>Sopra Steria:</h2>
                                 <span>
-                                  <h3>Tea Knudsen</h3>><a href="mailto: tea.knudsen@soprasteria.com">tea.knudsen@soprasteria.com</a>
+                                  <h3>Tea Knudsen</h3><a href="mailto: tea.knudsen@soprasteria.com">tea.knudsen@soprasteria.com</a>
                                   <p></p>
                                 </span>
                               
