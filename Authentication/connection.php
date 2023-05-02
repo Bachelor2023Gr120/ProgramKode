@@ -1,5 +1,6 @@
 <?php      
         // Variables used in the database connection
+        //192.168.1.25 |localhost| passord
     $host = "192.168.1.25";  //Database serveren
     $email = "root";  
     $password = 'passord';  

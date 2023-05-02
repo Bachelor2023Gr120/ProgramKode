@@ -13,7 +13,7 @@ $result = mysqli_query($con, $sql);  //Execute the query, ('$con' if connected)
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC); // Return the user data  
 $count = mysqli_num_rows($result); // Uses to bring the number of rows returned by our query
      //the page that will be redirect to
-$url = "../Pages/Workspace.php"; 
+$url = "../Pages/TestingCenter.php"; 
 
 if($count == 1){  // if there is data/row
     // Set session variables
@@ -21,7 +21,7 @@ if($count == 1){  // if there is data/row
     //$_SESSION["email"] = $row['email'];
     $_SESSION["name"] = $row["name"];
 
-    // Redirect to Workspace.php
+    // Redirect to Testing Center.php
     header("Location: $url "); 
 }  
 else{  //if not alert the massege and keep the user in the same page!

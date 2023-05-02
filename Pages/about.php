@@ -29,7 +29,7 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a href="../index.php">Home</a></li>
-          <li><a href="../Pages/Workspace.php">Workspace</a></li>
+          <li><a href="../Pages/TestingCenter.php">Testing Center</a></li>
           <li><a href="../Pages/about.php">About</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -37,7 +37,7 @@
           session_start();
           if(isset($_SESSION['user_id'])) {
               // User is logged in, display username and Logout button
-              echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+             // echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
               echo '<li><a><span style="margin:0; padding: 0;"id="username-display"></span></a></li>';
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {
@@ -56,20 +56,22 @@
         <div class="container">
               <div class="aboutContant">
                           <span>
-                            <p>We're a team of students working on a bachelor's project in collaboration with <a href="https://www.soprasteria.no"><b>Sopra Steria</b></a>, 
-                              <br>aimed at helping companies improve their information security and compliance practices.</p><br>
+                            <p>We are a team of students working on a bachelor project in collaboration with <a href="https://www.soprasteria.no"><b>Sopra Steria</b></a>, 
+                              <br>Our goal is to help companies improve their general information security and compliance practices.</p><br>
                           </span>
                           <span>
-                            <p>Our purpose is to provide businesses with a platform that helps them assess their information security maturity, 
-                              <br>understand their legal and regulatory requirements, and make informed decisions about how to protect their data and assets.</p><br>
+                            <p>We want to provide businesses with a platform that helps these companies get a general rating of their maturity  <br>
+                              within information security, and to give them a general rating of compliance to regulations within specific sectors. 
+                              </p><br>
                           </span>
                           <span>
-                            <p>Our project is focused on developing a user-friendly tool that allows businesses to self-assess their information security maturity level
-                              <br> based on the <b>ISO 27001 standard</b>. In addition to the self-assessment tool, we provide information about laws and regulations 
-                              <br>that businesses need to comply with based on their industry sectors and the services they provide.</p><br>
+                            <p>The maturity test is based on the <b>ISO 27001 standard</b>, which is a very known and established standard. <br>
+                                It is the industry standard for a lot of companies, also in Norway. The compliance test is designed to get a general overview of how compliant 
+                                <br>the company is to specific regulations within the sector and services they provide. 
+                                Some of the questions related to regulation are also included in the <b>ISO 27001 standard</b>. </p><br>
                           </span>
                           <span>
-                            <p>Our team consists of three highly motivated students with a passion for cybersecurity, and we share a common goal of making a positive impact in the world.</p>
+                            <p>The team consists of three highly motivated students with a passion for cybersecurity, and we share a common goal of making a positive impact in the world.</p>
                           </span>
                           <p>Thank you for visiting our website, and we hope you find our tools and information helpful in improving your information security practices.</p>
                         </div>

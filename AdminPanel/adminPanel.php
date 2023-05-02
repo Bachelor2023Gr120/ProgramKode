@@ -33,7 +33,7 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a href="../index.php">Home</a></li>
-          <li class="active"><a href="../Pages/Workspace.php">Workspace</a></li>
+          <li class="active"><a href="../Pages/TestingCenter.php">Testing Center</a></li>
           <li><a href="../Pages/about.php">About</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -61,8 +61,14 @@
   <div>
       <h1>Admin Panel</h1>
             <div class="dashboard">
-                          <div class="controls"> 
+                          <div class="controls"  id="controls"> 
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#controls" 
+                                     aria-controls="controls" aria-expanded="false">
+                                     <span class="navbar-toggler-icon">
+                                     </span>
+                                     </button>                       
                                     <h3>Controls</h3>
+
                                     <span>
                                           <p>Add a new user </p>
                                           <button class="btn btn-primary" name='add_user' onclick="loadUserForm()" type='submit'>Add User</button>
@@ -74,14 +80,15 @@
                                           <button class="btn btn-primary" name='add_company' onclick="loadCompanyForm()" type='submit'>Add Company</button>
                                           <p>Modify Company data</p>
                                           <button class="btn btn-primary" name='Search_Company' onclick="loadSearchCompanyForm()" type='submit'>Modify Company</button>
-                                    </span>
-                                      
-                                       
-                                     
-                           </div> 
+                                    </span>  
+                                                                  
+
+                              </div> 
+
+
                            
                            
-                           <div class="contentList" style="border-left: 6px solid #EEE; height: 650px;max-height: 90%;">
+                           <div class="contentList">
                                         <div class="users" id="userSearchForm" style="">
                                           <?php include('./controls/searchUser.php'); ?>
                                         </div>

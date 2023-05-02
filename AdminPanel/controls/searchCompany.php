@@ -6,8 +6,10 @@
   <input class="btn btn-primary" style="padding: 4px;" type="submit" name="ComSubmit">                  
    </form>              
 
-<?php
- $con = new PDO("mysql:host=192.168.1.25;dbname=usercompanydb",'root', 'passord');
+<?php  
+                                        //"mysql:host=localhost; dbname=usercompanydb",'root', ''
+                                        //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
+ $con = new PDO("mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord');
 
 if (isset($_POST["ComSubmit"])) {
     $str = $_POST["ComSearch"];

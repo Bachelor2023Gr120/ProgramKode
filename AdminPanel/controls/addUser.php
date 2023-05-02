@@ -23,8 +23,10 @@
             <div class="form-group col-md-4">
                 <label for="inputState">Company</label>
                 <select id="inputState" class="form-control" name="company_id" required>
-                    <?php
-                        $conn = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
+                    <?php                
+                                        //"mysql:host=localhost; dbname=usercompanydb",'root', ''
+                                        //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
+                        $conn = new PDO("mysql:host=localhost; dbname=usercompanydb",'root', '');
                         $stmt = $conn->query("SELECT company_id, company_name FROM company");
                         while ($row = $stmt->fetch()) {
                         echo "<option value='" . $row['company_id'] . "'>" . $row['company_name'] . "</option>";
@@ -62,8 +64,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //$company_id_val = ($company_id == 'NTNU') ? 1002 : 1001;
     $admin = isset($_POST['admin']) ? 1 : 0;
 
-
-    $conn = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
+                                        //"mysql:host=localhost; dbname=usercompanydb",'root', ''
+                                        //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
+    $conn = new PDO("mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord');
 
     // prepare the query with placeholders
     $stmt = $conn->prepare("INSERT INTO user ( `name`, `email`, `password`, `company_id`, `admin`) 
