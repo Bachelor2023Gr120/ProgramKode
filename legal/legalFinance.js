@@ -1,6 +1,13 @@
 // based on the code of QuestionList
 
 
+var section=["section in law: § 2", "section in law: § 2","section in law: § 2"
+,"section in law: § 2", "section in law: § 3", "section in law: § 3", "section in law: § 3", 
+  "section in law: § 5", "section in law: § 5", "section in law §: 6", "section in law § 7"
+  , "section in law: §  8", "section in law: § 8", "section in law: § 9", "section in law: § 11",
+  "section in law: § 11 ", "section in law: § 12", "section in law: § 12"
+ ];
+
 
 fetch('legalFinanceQuestions.json')
   .then( response => {
@@ -29,6 +36,7 @@ fetch('legalFinanceQuestions.json')
 
   let currentQuestionIndex = 0;
   var teller =0;
+
 
     function showQuestion(question) {
 
@@ -103,6 +111,7 @@ fetch('legalFinanceQuestions.json')
         q.innerHTML = teller + ". ";
         const qText = document.createTextNode(question.questionsList[i].q);
         q.appendChild(qText);
+        q.innerHTML+= "<br><br>" + section[teller];
         form.appendChild(q);
         const radioButtons = createQuestionForm(i);
         form.appendChild(radioButtons);
