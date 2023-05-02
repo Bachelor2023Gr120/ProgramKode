@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $website = $_POST['website'];
 
     // connect to the database
-    $conn = new PDO("mysql:host=localhost; dbname=usercompanydb",'root', '');
+    $conn = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
 
     // prepare the query with placeholders
     $stmt = $conn->prepare("INSERT INTO company (company_name, website) VALUES (:company_name, :website)");

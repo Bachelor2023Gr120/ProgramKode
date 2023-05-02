@@ -26,7 +26,7 @@
                 <label for="inputState">Company</label>
                 <select id="inputState" class="form-control" name="company" required>
                     <?php
-                        $conn = new PDO("mysql:host=localhost; dbname=usercompanydb",'root', '');
+                        $conn = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
                         $stmt = $conn->query("SELECT company_id, company_name FROM company");
                         while ($row = $stmt->fetch()) {
                         echo "<option value='" . $row['company_id'] . "'>" . $row['company_name'] . "</option>";
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_id = $_POST['user_id'];
   
     // update the user record in the database
-    $conn = new PDO("mysql:host=localhost; dbname=usercompanydb",'root', '');
+    $conn = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
     $stmt = $conn->prepare("UPDATE user SET name = :name, email = :email, password = :password, company_id = :company, admin = :admin WHERE user_id = :user_id");
 
     $stmt->bindParam(':name', $name);

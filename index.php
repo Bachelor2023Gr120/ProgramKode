@@ -75,7 +75,7 @@
            <img class="card-img" src="./Images/financial.jpg" alt="Card image">
            <div class="card-body">
              <h2 class="card-title">Financial</h2>
-             <p class="card-text"> short description of the financial regulations questionaire.
+             <p class="card-text"> Short description of the financial regulations questionaire.
               </p>
              
            </div>

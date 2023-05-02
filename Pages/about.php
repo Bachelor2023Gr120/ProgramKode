@@ -42,7 +42,7 @@
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {
               // User is not logged in, display Login button
-              echo '<li><a href="./Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+              echo '<li><a href="../Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
           }
           ?>   
         </ul>
@@ -81,13 +81,13 @@
                               <div">
                                 <h2>Team Members:</h2>
                                 <span>
-                                  <h3>Murad Dimen</h3><p> moradha@stud.no</p>
+                                  <h3>Murad Dimen</h3><a href="mailto: Moradha@moradha@stud.ntnu.no">moradha@stud.ntnu.no</a>
                                 </span>
                                 <span>
-                                  <h3>Jonas Simonsen</h3><p>jonasfsi@ntnu.no</p>
+                                  <h3>Jonas Simonsen</h3><a href="mailto:jonasfsi@stud.ntnu.no">jonasfsi@stud.ntnu.no</a>
                                 </span>
                                 <span>
-                                  <h3>Sondre Bakke</h3><p>sondrsba@ntnu.no</p>
+                                  <h3>Sondre Bakke</h3><a href="mailto: sondrsba@stud.ntnu.no">sondrsba@stud.ntnu.no</a>
                                 </span>
                               </div>
                               <div>

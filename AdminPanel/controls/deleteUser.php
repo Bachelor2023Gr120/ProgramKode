@@ -3,7 +3,7 @@
 $user_id = $_GET['user_id'];
 
 // delete the user from the database
-$conn = new PDO("mysql:host=localhost; dbname=usercompanydb",'root', '');
+$conn = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
 $stmt = $conn->prepare("DELETE FROM user WHERE user_id = :user_id");
 $stmt->bindParam(':user_id', $user_id);
 $stmt->execute();

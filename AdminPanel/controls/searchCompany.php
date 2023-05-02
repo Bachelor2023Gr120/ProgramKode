@@ -7,7 +7,7 @@
    </form>              
 
 <?php
- $con = new PDO("mysql:host=localhost;dbname=usercompanydb",'root', '');
+ $con = new PDO("mysql:host=192.168.1.25;dbname=usercompanydb",'root', 'passord');
 
 if (isset($_POST["ComSubmit"])) {
     $str = $_POST["ComSearch"];
