@@ -81,7 +81,7 @@
                            </div> 
                            
                            
-                           <div class="contentList" style="border-left: 6px solid #EEE; height: 100%;">
+                           <div class="contentList" style="border-left: 6px solid #EEE; height: 650px;max-height: 90%;">
                                         <div class="users" id="userSearchForm" style="">
                                           <?php include('./controls/searchUser.php'); ?>
                                         </div>
