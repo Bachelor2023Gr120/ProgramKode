@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
 
     // prepare the query with placeholders
-    $stmt = $conn->prepare("INSERT INTO company (company_name, website) VALUES (:company_name, :website)");
+    $stmt = $conn->prepare("INSERT INTO usercompanydb.company (company_name, website) VALUES (:company_name, :website)");
 
     // bind the values to the placeholders
     $stmt->bindParam(':company_name', $company_name);
