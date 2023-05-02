@@ -68,7 +68,7 @@ function loadUserForm() {
       }
     }
   };
-  xhr.open('GET', './controls/addUser.php', true);
+  xhr.open('GET', './AdminPanel/controls/addUser.php', true);
   xhr.send();
 }
 
