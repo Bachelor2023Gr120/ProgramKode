@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../adminPanel.php");
     } else {
         echo "<script>if(confirm('Error adding company.'))
-           {document.location.href=' ./adminPanel.php'};</script>";
+           {document.location.href=' ../adminPanel.php'};</script>";
     }
 
     // close the database connection

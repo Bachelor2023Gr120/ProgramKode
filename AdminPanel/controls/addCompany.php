@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // execute the query
     if ($stmt->execute()) {
-        header("Location: ./adminPanel.php");
+        header("Location: ../adminPanel.php");
     } else {
         echo "<script>if(confirm('Error adding company.'))
            {document.location.href=' ../adminPanel.php'};</script>";
