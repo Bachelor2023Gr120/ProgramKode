@@ -8,9 +8,9 @@
                  //192.168.1.25 |localhost| passord
 
         // Variables used in the database connection
-    $host = "localhost";  //Database serveren
+    $host = "192.168.1.25";  //Database serveren
     $email = "root";  
-    $password = '';  
+    $password = 'passord';  
     $db_name = "usercompanydb";  
                     // Establishing the connection to the MySql/DB
     $con = mysqli_connect($host, $email, $password, $db_name);  

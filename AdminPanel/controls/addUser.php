@@ -40,7 +40,7 @@
 
                         // This code will connect to the database and bring all company names that exist in the DB.
                         // create a connection to the database.
-                        $con = new PDO("mysql:host=localhost; dbname=usercompanydb",'root', '');
+                        $con = new PDO("mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord');
                         // the query that will be sent to the database.
                         $query = $con->query("SELECT company_id, company_name FROM company");
                         //While there is a row in DB, execute the code below.
@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         //"mysql:host=localhost; dbname=usercompanydb",'root', ''
                                         //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
     // create a connection to the database 
-    $con = new PDO("mysql:host=localhost; dbname=usercompanydb",'root', '');
+    $con = new PDO("mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord');
 
     // the query that will be sent to the database (with the values)
     $query = $con->prepare("INSERT INTO user ( `name`, `email`, `password`, `company_id`, `admin`) 
