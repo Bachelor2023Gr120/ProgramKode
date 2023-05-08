@@ -13,7 +13,7 @@
                                         //"mysql:host=localhost; dbname=usercompanydb",'root', ''
                                         //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
 // create a connection to the database                                         
-$con = new PDO("mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord');
+$con = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
 
 // if the user Submit a data, will search for it, and if not will display all users. 
 if (isset($_POST["UserSubmit"])) {

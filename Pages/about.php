@@ -34,19 +34,22 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
         <?php
+          // This php script uses to check if the user logged in or not, based on it will display either login/logout-
+          // in the navbar, and will also display the user name.
+          session_start();
           if(isset($_SESSION['user_id'])) {
-                // If admin display admin panel 
-                if($_SESSION['admin']) {
-                  echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
-               }
-                    // If logged in, display username and Logout button
+                              // If admin display admin panel 
+              if($_SESSION['admin']) {
+                    echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+              }
+                            // If logged in, display username and Logout button
               echo '<li><a><span style="margin:0; padding: 0;"id="username"></span></a></li>';
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {
               // If not logged in, display Login button
-              echo '<li><a href="./Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+              echo '<li><a href="../Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
           }
-          ?>
+          ?>      
         </ul>
       </div>
     </div>
@@ -119,7 +122,7 @@
       <script>
           // This script will fetch the user name if logged-in
         const Username = "<?php echo $_SESSION['name']; ?>";
-        const usernameDisplay = document.getElementById("username-display");
+        const usernameDisplay = document.getElementById("username");
         usernameDisplay.textContent = `${Username}`;
       </script>
 
