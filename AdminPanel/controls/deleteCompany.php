@@ -9,7 +9,7 @@ $company_id = $_GET['company_id'];
 $con = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
 
 // the query that will be sent to the database (with the value)
-$query = $conn->prepare("DELETE FROM company WHERE company_id = :company_id");
+$query = $con->prepare("DELETE FROM company WHERE company_id = :company_id");
 
 // Set the value like the one company_id data (Data got when user clicked on delete button)
 $query->bindParam(':company_id', $company_id);
