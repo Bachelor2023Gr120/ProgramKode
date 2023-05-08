@@ -1,5 +1,3 @@
-
-
 <!-- Form for the company adding-->
 <form method="POST" class="form-row" action="./controls/addCompany.php">
 <h2>Add Company</h2>

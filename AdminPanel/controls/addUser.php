@@ -1,5 +1,4 @@
-
-<!-- Form for the company adding-->
+<!-- Form for the User adding-->
 <form method="POST" class="form-row" action="./controls/addUser.php">
 <h2>Add User</h2>
 <hr>

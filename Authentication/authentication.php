@@ -35,7 +35,7 @@ if($count == 1){  // if there is data/row
 }  
 else{  //if not alert the massege and keep the user in the same page!
     echo "<script>if(confirm('Login failed. Invalid email or password.'))
-           {document.location.href='../Pages/login-form.php'};</script>";
+           {document.location.href='../Pages/login-form.html'};</script>";
 } 
 ?>
 

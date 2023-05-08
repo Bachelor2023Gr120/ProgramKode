@@ -1,21 +1,46 @@
+/**
+ * Used this source to create the functions:
+ * 
+ * https://www.w3schools.com/js/js_ajax_http.asp
+ * https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+ * https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readystatechange_event
+ */
 
+
+
+/**
+ * This function will bring/load the search form (search bar)
+ * for the user in the UserListDiv
+ */
 function loadSearchUserForm() {
-  var CompanyListDiv = document.querySelector('.contentList');
+  // first will get the UserListDiv elment by using the class name(.contentList)
+  var UserListDiv = document.querySelector('.contentList');
+   // create a new XMLHttpRequest object
   var xhr = new XMLHttpRequest();
+  // The function will be called/run when the readyState changes
   xhr.onreadystatechange = function() {
+    // if the request is done
     if (xhr.readyState === XMLHttpRequest.DONE) {
+      // and was successful request 
       if (xhr.status === 200) {
-        CompanyListDiv.innerHTML = xhr.responseText;
-      } else {
+        // set the content/text like  the response text
+        UserListDiv.innerHTML = xhr.responseText;
+      } else { // lese alert an error messege
         alert('There was a problem loading the form.');
       }
     }
   };
+  // Open and send a GET request to the searchUser.php 
   xhr.open('GET', './controls/searchUser.php', true);
   xhr.send();
 }
 
 
+/**
+ * This function will bring/load the company tabel.
+ * 
+ * NB: Has the same process as the loadSearchUserForm(), therefore will not comment on it
+ */
 function loadSearchCompanyForm() {
   var CompanyListDiv = document.querySelector('.contentList');
   var xhr = new XMLHttpRequest();
@@ -23,7 +48,7 @@ function loadSearchCompanyForm() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         CompanyListDiv.innerHTML = xhr.responseText;
-      } else {
+      } else { 
         alert('There was a problem loading the form.');
       }
     }
@@ -33,8 +58,12 @@ function loadSearchCompanyForm() {
 }
 
 
-
-
+/**
+ * This function will bring/load the Company Form
+ *  to add a new company to the database.
+ * 
+ * NB: Has the same process as the loadSearchUserForm(), therefore will not comment on it
+ */
 function loadCompanyForm() {
   var usersListDiv = document.querySelector('.contentList');
   var xhr = new XMLHttpRequest();
@@ -52,7 +81,12 @@ function loadCompanyForm() {
 }
 
 
-
+/**
+ * This function will bring/load the User Form
+ *  to add a new User to the database.
+ * 
+ * NB: Has the same process as the loadSearchUserForm(), therefore will not comment on it
+ */
 function loadUserForm() {
   var usersListDiv = document.querySelector('.contentList');
   var xhr = new XMLHttpRequest();

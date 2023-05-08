@@ -64,6 +64,7 @@ body {
 .container-text{
   width: fit-content;
   height:400px;
+  max-height: 800px;
   margin: 1%;
   margin-bottom: 4%;
   line-height: 1.5;
@@ -114,6 +115,10 @@ body {
 @media (max-width: 768px) {
   .main-content{
     font-size: 1.4rem;
+  }
+  .container-text{
+    width: fit-content;
+    height:fit-content;
   }
   
   .containers {

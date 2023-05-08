@@ -1,3 +1,4 @@
+<!-- Form for user search-->
 <div class="searchForm">
   <form method="POST" id="UserModify"> 
   <h2>User List</h2>
