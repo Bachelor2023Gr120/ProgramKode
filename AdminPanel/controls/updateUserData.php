@@ -28,7 +28,7 @@
                     <?php 
                                                             //"mysql:host=localhost; dbname=usercompanydb",'root', ''
                                                           //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
-                        $conn = new PDO("mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord');
+                        $conn = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
                         $stmt = $conn->query("SELECT company_id, company_name FROM company");
                         while ($row = $stmt->fetch()) {
                         echo "<option value='" . $row['company_id'] . "'>" . $row['company_name'] . "</option>";
