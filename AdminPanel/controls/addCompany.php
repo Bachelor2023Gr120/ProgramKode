@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // create a connection to the database 
                                                                     //"mysql:host=localhost; dbname=usercompanydb",'root', ''
                                                                     //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
-    $con = new PDO("mysql:host=localhost; dbname=usercompanydb",'root', '');
+    $con = new PDO("mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord');
 
     // the query that will be sent to the database (with the values)
     $query = $con->prepare("INSERT INTO company (company_name, website) VALUES (:company_name, :website)");
