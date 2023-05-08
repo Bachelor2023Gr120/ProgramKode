@@ -33,24 +33,26 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
           <?php
-          session_start();
           if(isset($_SESSION['user_id'])) {
-              // User is logged in, display username and Logout button
-              //echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
-              echo '<li><a><span style="margin:0; padding: 0;"id="username-display"></span></a></li>';
+                // If admin display admin panel 
+                if($_SESSION['admin']) {
+                  echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+               }
+                    // If logged in, display username and Logout button
+              echo '<li><a><span style="margin:0; padding: 0;"id="username"></span></a></li>';
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {
-              // User is not logged in, display Login button
+              // If not logged in, display Login button
               echo '<li><a href="./Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
           }
-          ?>   
+          ?>
           </ul>
         </div>
       </div>
     </nav>
     <h1 style="font-weight: bold;   font-family: Arial, Helvetica, sans-serif;">Healthcare Sector</h1>
-
-        <div class="items">         
+        <!--Div for the text-->
+        <div class="contents">         
            <p>There are many requirements that need to be filled for the health-care sector to function properly.
              One of these requirements is that all relevant patient information is shared securely.
               It is crucial that the information is correct and updated, so the patients get the right medications and treatment.
@@ -82,6 +84,7 @@
         </div>
 
         <script>
+          // This script will fetch the user name if logged-in
         const Username = "<?php echo $_SESSION['name']; ?>";
         const usernameDisplay = document.getElementById("username-display");
         usernameDisplay.textContent = `${Username}`;

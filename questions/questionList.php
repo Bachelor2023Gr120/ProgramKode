@@ -36,26 +36,32 @@
         <ul class="nav navbar-nav navbar-right">
         <?php
           if(isset($_SESSION['user_id'])) {
-              // User is logged in, display username and Logout button
-              //echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+                // If admin display admin panel 
+                if($_SESSION['admin']) {
+                  echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+               }
+                    // If logged in, display username and Logout button
               echo '<li><a><span style="margin:0; padding: 0;"id="username"></span></a></li>';
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {
-              // User is not logged in, display Login button
+              // If not logged in, display Login button
               echo '<li><a href="./Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
           }
-          ?>   
+          ?>
         </ul>
       </div>
     </div>
   </nav>
-      
+
+  
+      <!--Div for displaying the quetions-->
       <div class="question-box" id="question-box">  
         <main>
         </main>
       </div>
 
       <script>
+        // This script will fetch the user name if logged-in
         const Username = "<?php echo $_SESSION['name']; ?>";
         const usernameDisplay = document.getElementById("username");
         usernameDisplay.textContent = `${Username}`;

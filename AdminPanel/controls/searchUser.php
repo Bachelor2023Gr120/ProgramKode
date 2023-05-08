@@ -1,28 +1,39 @@
-<h2>User List</h2>
+<div class="searchForm">
+  <form method="POST" id="UserModify"> 
+  <h2>User List</h2>
 <hr>
-  <form method="post" id="UserModify"> 
-  <label>Search</label> <br>
-  <input type="text" name="UserSearch" placeholder="Username..">
-  <input class="btn btn-primary" style="padding: 4px;" type="submit" name="UserSubmit">                  
-   </form>              
+    <label>Search</label> <br>
+    <input type="text" name="UserSearch" placeholder="Username..">
+    <input class="btn btn-primary" style="padding: 4px;" type="submit" name="UserSubmit">                  
+  </form> 
+</div>
+             
 
 <?php 
                                         //"mysql:host=localhost; dbname=usercompanydb",'root', ''
                                         //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
- $con = new PDO("mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord');
+// create a connection to the database                                         
+$con = new PDO("mysql:host=localhost; dbname=usercompanydb",'root', '');
 
+// if the user Submit a data, will search for it, and if not will display all users. 
 if (isset($_POST["UserSubmit"])) {
-$str = $_POST["UserSearch"];
+// Bring the data using the name values in the input (if submited)
+$userName = $_POST["UserSearch"];
 
-$sth = $con->prepare(" SELECT `user`.*, company.company_name
+// the query that will be sent to the database (with the values).
+// The query will INNER JOIN  company to be abel to display the company name.
+$query = $con->prepare(" SELECT `user`.*, company.company_name
 FROM `user`
 INNER JOIN company ON `user`.company_id LIKE company.company_id
-WHERE `user`.name LIKE '%$str%';");
+WHERE `user`.name LIKE '%$userName%';");
 
-$sth->setFetchMode(PDO::FETCH_OBJ);
-$sth->execute();
+// Set for the PDO query to return objects 
+$query->setFetchMode(PDO::FETCH_OBJ);
+// Execute the query
+$query->execute();
 
-  if ($sth->rowCount() > 0) {
+  // if there is a row 
+  if ($query->rowCount() > 0) {
     echo "<table class='table'>
      <tr>
          <th>UserId</th>
@@ -31,22 +42,21 @@ $sth->execute();
         <th>Company</th>
          <th>Actions</th>
           </tr>";
-
-       while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
+      //While there is a row in DB, execute the code below. (DeleteUser($row->user_id) uses when the user click on delete, so its send the user_id)
+       while ($row = $query->fetch(PDO::FETCH_OBJ)) {
          echo "<tr>
             <td>{$row->user_id}</td>
              <td>{$row->name}</td>
               <td>{$row->email}</td>
               <td>{$row->company_name}</td>
                   <td>
-              <a class='btn btn-info btn-sm'onclick=\"UpdateUserData($row->user_id)\"><span class='glyphicon glyphicon-pencil'></span> Modify</a>
-              <a class='btn btn-danger btn-sm' onclick=\"DeleteUser($row->user_id)\"><span class='glyphicon glyphicon-trash'></span> Delete</a>
+                  <a class='btn btn-danger btn-sm' onclick=\"DeleteUser($row->user_id)\"><span class='glyphicon glyphicon-trash'></span> Delete</a>
                  </td>
                  </tr>";
                  }
 
                   echo "</table>";
-   } else {
+   } else { // if there is no data to display, display the code below.
     echo "<table class='table'>
     <tr>
         <th>UserId</th>
@@ -57,9 +67,8 @@ $sth->execute();
          </tr>";
        echo "
        <th colspan=\"5\" style=\"  text-align: center;\"><p>No results found.</p></th>";
-
-
-
-           }
-             }
+    }
+       // close connection
+       $con = null;
+    }
 ?>

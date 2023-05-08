@@ -35,19 +35,24 @@
         <ul class="nav navbar-nav navbar-right">
         <?php
           if(isset($_SESSION['user_id'])) {
-              // User is logged in, display username and Logout button
-              //echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+                // If admin display admin panel 
+                if($_SESSION['admin']) {
+                  echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+               }
+                    // If logged in, display username and Logout button
               echo '<li><a><span style="margin:0; padding: 0;"id="username"></span></a></li>';
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {
-              // User is not logged in, display Login button
+              // If not logged in, display Login button
               echo '<li><a href="./Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
           }
-          ?>   
+          ?>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!--Div for the description text -->
   <div class="description-text">
       <h1>Testing Center</h1>
       <p>This is where everything happens. The test center is designed to be intuitive and easy to use. Here you can get a general <b>ISO27001</b><br>
@@ -57,14 +62,15 @@
       </p>
   </div>
 
-
+  <!--Div for the page containers -->
   <div class="page-container">
      <div class="grid-containers">
 
+         <!--Div for each container-->
          <div class="containers">
-           <div class="card-body">
-             <h2 class="card-title">General ISO27001 maturity rating test</h2>
-             <p class="card-text"> This questionnaire is based on <b>Annex A</b> of the <b>ISO27001</b> standard and consists of 
+           <div class="container-body">
+             <h2 class="container-title">General ISO27001 maturity rating test</h2>
+             <p class="container-text"> This questionnaire is based on <b>Annex A</b> of the <b>ISO27001</b> standard and consists of 
                 <b>14</b> categories of security controls, each with several control measures presented in the 
                 form of questions. ISO27001 is a established and internationally known standard to manage information security. 
                 It is also a one of the most used standards in Norway. <br><br>
@@ -77,11 +83,11 @@
               <button class="btn btn-primary"  onclick="location.href='../questions/questionList.php'">Start Questionnaire</button>
             </div>
          </div>
-
+          <!--Div for each container-->
          <div class="containers">
-           <div class="card-body">
-             <h2 class="card-title">Display ISO27001 questionnaire results</h2>
-             <p class="card-text"> This tool helps organizations assess their compliance level with the <b>ISO27001</b> standard. 
+           <div class="container-body">
+             <h2 class="container-title">Display ISO27001 questionnaire results</h2>
+             <p class="container-text"> This tool helps organizations assess their compliance level with the <b>ISO27001</b> standard. 
             To get started, simply take our questionnaire, which is presented above. Once completed, 
             you can upload the <b>JSON</b> file and view the results displayed in easy-to-understand graphs. 
             These graphs will provide you with a clear understanding of your organization's compliance 
@@ -90,33 +96,33 @@
               </p>
               <button class="btn btn-primary"  onclick="location.href='../Results/displayResult.php'">Display</button>
            </div>
-     </div>
-
-     <div class="containers">
-           <div class="card-body">
-             <h2 class="card-title">Compare results from the ISO27001 test</h2>
-             <p class="card-text"> This comparison tool enables you to compare the results of the current and previous tests in an interactive graph.
-               By analyzing the data side by side, you can quickly identify areas of improvement and see the progress you have made over time.
-              </p>
-              <button class="btn btn-primary"  onclick="location.href='../Results/compareResult.php'">Compare</button>
-           </div>
-     </div>
-         
+        </div>
+         <!--Div for each container-->
+        <div class="containers">
+            <div class="container-body">
+              <h2 class="container-title">Compare results from the ISO27001 test</h2>
+              <p class="container-text"> This comparison tool enables you to compare the results of the current and previous tests in an interactive graph.
+                By analyzing the data side by side, you can quickly identify areas of improvement and see the progress you have made over time.
+                </p>
+                <button class="btn btn-primary"  onclick="location.href='../Results/compareResult.php'">Compare</button>
+            </div>
+        </div>
+         <!--Div for each container-->
          <div class="containers">
-           <div class="card-body">
-             <h2 class="card-title">Test compliance to legal regulations</h2>
-             <p class="card-text">Questionnaire that tests the compliance rate of the company. For now you can choose between two sectors:<br>
+           <div class="container-body">
+             <h2 class="container-title">Test compliance to legal regulations</h2>
+             <p class="container-text">Questionnaire that tests the compliance rate of the company. For now you can choose between two sectors:<br>
              <b>Healthcare and Finance </b> 
               </p>
               <button class="btn btn-primary"  onclick="location.href='../legal/legal.php'">Start Questionaire Legal regulations</button>
            </div>
      </div>
 
-
+    <!--Div for each container-->
      <div class="containers">
-           <div class="card-body">
-             <h2 class="card-title">Display results for legal regulations</h2>
-             <p class="card-text">This illustrates the company’s compliance rate in a bar chart and a doughnut chart.
+           <div class="container-body">
+             <h2 class="container-title">Display results for legal regulations</h2>
+             <p class="container-text">This illustrates the company’s compliance rate in a bar chart and a doughnut chart.
               </p>
               <button class="btn btn-primary" onclick="location.href='../legal/legalShowResults.php'">Show Results Legal regulations</button>
            </div>
@@ -124,6 +130,7 @@
   </div>
 
       <script>
+        // This script will fetch the user name if logged-in
         const Username = "<?php echo $_SESSION['name']; ?>";
         const usernameDisplay = document.getElementById("username");
         usernameDisplay.textContent = `${Username}`;

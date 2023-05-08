@@ -40,12 +40,15 @@
         <ul class="nav navbar-nav navbar-right">
         <?php
           if(isset($_SESSION['user_id'])) {
-              // User is logged in, display username and Logout button
-              //echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+                // If admin display admin panel 
+              if($_SESSION['admin']) {
+                 echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+              }
+                // If logged in, display username and Logout button
               echo '<li><a><span style="margin:0; padding: 0;"id="username"></span></a></li>';
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {
-              // User is not logged in, display Login button
+              // If not logged in, display Login button
               echo '<li><a href="./Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
           }
           ?>            
@@ -53,8 +56,10 @@
       </div>
     </div>
   </nav>
+
+<!--Div for file uploading at the start-->
 <div class="file-Upload" id="file-reader">
-    <h1>Display your results</h1> <br>
+    <h1 style="font-weight: bold;">Display your results</h1> <br>
     <p>
         Visualize your results with ease using our chart feature, 
         allowing you to quickly identify areas that require improvement to 
@@ -66,28 +71,31 @@
 </div>
 
 
-
+<!--Div for the content after file uploaded-->
    <div class="main-content">
           <h1 id="Results"></h1>
           <p id="chart-description"></p>
-          <p id="instruction-text" style="text-align: start; justify-content: center;"></p>
-
+          <!--Div for contain the instruction box-->
+          <div class="instruction-text">
+            <p id="instruction-text" style=" margin: 2%;"></p>
+          </div>
+            <!--Div for both charts-->
             <div class="charts" id="charts"  style="display: none;">
-                <canvas class="bar-chart" id="chart" width="940" height="620" style="display: block; height: 660px; width: 420px;"></canvas>
+                <canvas class="bar-chart" id="bar-chart" width="940" height="620" style="display: block; height: 660px; width: 420px;"></canvas>
                 <canvas class="donut-chart" id="donut-chart" width="940" height="620" style="display: block; height: 660px; width: 420px;"></canvas>
             </div>
-
-            <div class="answers">
-                  <div id="questions"></div>
-                  <div id="userAnswers" style="font-weight: bold;"></div>
+            <!--Div for the user answers box-->
+            <div class="answersContainer">
+                  <div id="userAnswersContainer" style="font-weight: bold;"></div>
             </div>
-
-            <div class="compare-button">
+            <!--Div for the compare text and button-->
+            <div class="compare-TextButton">
                 <p id="Compare"></p>
             </div>
       </div>
 
       <script>
+        // This script will fetch the user name if logged-in
         const Username = "<?php echo $_SESSION['name']; ?>";
         const usernameDisplay = document.getElementById("username");
         usernameDisplay.textContent = `${Username}`;

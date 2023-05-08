@@ -1,4 +1,13 @@
 <?php 
+/**
+ * These sources were used in the code of this file.
+ * 
+ *  https://stackoverflow.com/questions/39408498/next-page-by-clicking-ok-on-alert-box  
+ *  https://phppot.com/php/php-login-script-with-session/
+ *  https://www.tutorialspoint.com/php/php_login_example.htm
+ */
+
+
 session_start();    // Starting a new session
     // Establishing the connection! (SEE connection.php FILE)
 include('connection.php');  
@@ -17,9 +26,9 @@ $url = "../Pages/TestingCenter.php";
 
 if($count == 1){  // if there is data/row
     // Set session variables
-    $_SESSION["user_id"] = $row['user_id'];
-    //$_SESSION["email"] = $row['email'];
-    $_SESSION["name"] = $row["name"];
+    $_SESSION["user_id"] = $row['user_id']; // used for the session checking
+    $_SESSION["admin"] = $row['admin'];     // used to check if the user is admin
+    $_SESSION["name"] = $row["name"];       // used to fetch the user name
 
     // Redirect to Testing Center.php
     header("Location: $url "); 
@@ -27,10 +36,6 @@ if($count == 1){  // if there is data/row
 else{  //if not alert the massege and keep the user in the same page!
     echo "<script>if(confirm('Login failed. Invalid email or password.'))
            {document.location.href='../Pages/login-form.php'};</script>";
-           // https://stackoverflow.com/questions/39408498/next-page-by-clicking-ok-on-alert-box  
-           
-// https://phppot.com/php/php-login-script-with-session/
-// https://www.tutorialspoint.com/php/php_login_example.htm
 } 
 ?>
 

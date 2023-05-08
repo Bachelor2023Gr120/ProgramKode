@@ -28,7 +28,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
         </button>
-        <a class="navbar-brand" href="../index.php">Logo</a>
+        <a href="../index.php" >
+          <img class="logo-img" src="../Images/logo.png" alt="Card image">
+        </a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
@@ -38,17 +40,20 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
         <ul class="nav navbar-nav navbar-right">
-          <?php
+        <?php
           if(isset($_SESSION['user_id'])) {
-              // User is logged in, display username and Logout button
-              echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+                // If admin display admin panel 
+                if($_SESSION['admin']) {
+                  echo '<li><a href="./adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+               }
+                    // If logged in, display username and Logout button
               echo '<li><a><span style="margin:0; padding: 0;"id="username"></span></a></li>';
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
-
           } else {
-              // User is not logged in, display Login button
-              echo '<li><a href="./Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+              // If not logged in, display Login button
+              echo '<li><a href="../Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
           }
+          ?>
           ?>        
         </ul>
         
@@ -57,55 +62,56 @@
     </div>
   </nav>
 
-
-  <div>
+<!--Div for the admin panel-->
+  <div class="adminPanel">
       <h1>Admin Panel</h1>
+            <!--Div for the dashboard (the entire box)-->
             <div class="dashboard">
-                          <div class="controls"  id="controls"> 
-                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#controls" 
-                                     aria-controls="controls" aria-expanded="false">
-                                     <span class="navbar-toggler-icon">
-                                     </span>
-                                     </button>                       
-                                    <h3>Controls</h3>
+                <!--Div for the controls-->
+                <div class="controls"  id="controls"> 
+                            </button>                       
+                          <h2>Controls</h2>
+                          <span>
+                                <p>Add a new user </p>
+                                <button class="btn btn-primary" name='add_user' onclick="loadUserForm()" type='submit'>Add User</button>
+                                <p>Delete user data</p>
+                                <button class="btn btn-primary" name='Search_user' onclick="loadSearchUserForm()" type='submit'>Delete User</button>
+                          </span>
+                          
+                          <span>
+                                <p>Add a new company</p>
+                                <button class="btn btn-primary" name='add_company' onclick="loadCompanyForm()" type='submit'>Add Company</button>
+                                <p>Delete Company data</p>
+                                <button class="btn btn-primary" name='Search_Company' onclick="loadSearchCompanyForm()" type='submit'>Delete Company</button>
+                          </span>                            
+                    </div> 
+                    <!--Div for the arrowDown (will be displayed only for small screens)-->
+                    <div class="arrowDown"></div>
 
-                                    <span>
-                                          <p>Add a new user </p>
-                                          <button class="btn btn-primary" name='add_user' onclick="loadUserForm()" type='submit'>Add User</button>
-                                          <p>Modify user data</p>
-                                         <button class="btn btn-primary" name='Search_user' onclick="loadSearchUserForm()" type='submit'>Modify User</button>
-                                    </span>
-                                    <span>
-                                          <p>Add a new company</p>
-                                          <button class="btn btn-primary" name='add_company' onclick="loadCompanyForm()" type='submit'>Add Company</button>
-                                          <p>Modify Company data</p>
-                                          <button class="btn btn-primary" name='Search_Company' onclick="loadSearchCompanyForm()" type='submit'>Modify Company</button>
-                                    </span>  
-                                                                  
-
-                              </div> 
-
-
-                           
-                           
-                           <div class="contentList">
-                                        <div class="users" id="userSearchForm" style="">
-                                          <?php include('./controls/searchUser.php'); ?>
-                                        </div>
-                                        <div class="CompanyList" id="companyList" style="">
-                                            <?php include('./controls/searchCompany.php'); ?>
-                                          </div>
-                            </div>
-
-                 
+                    <!--Div for the content-->
+                    <div class="contentList">
+                        <div class="users" id="userSearchForm">
+                          <?php include('./controls/searchUser.php'); ?>
+                        </div>
+                      </div>                
            </div>
       </div>  
 
+
+        <script> 
+        // script will be used in the small media will (slideToggle) for displaying the controls
+              $(document).ready(function(){
+                $(".arrowDown").click(function(){
+                  $(".controls").slideToggle("slow");
+                });
+              });
+        </script>
               
         <script>
-        const Username = "<?php echo $_SESSION['name']; ?>";
-        const usernameDisplay = document.getElementById("username");
-        usernameDisplay.textContent = `${Username}`;
+           // This script will fetch the user name if logged-in
+          const Username = "<?php echo $_SESSION['name']; ?>";
+          const usernameDisplay = document.getElementById("username");
+          usernameDisplay.textContent = `${Username}`;
       </script>
       
   </body>

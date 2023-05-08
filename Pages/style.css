@@ -1,3 +1,7 @@
+/* 
+* body style: centralize the content of the body-
+* adding background color, and the text color.
+*/
 body{
   background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(194, 194, 194));
   color: #000000;
@@ -5,19 +9,28 @@ body{
   justify-content: center;
   
 }
+
+/* 
+* adding custom color and styling to the nav- 
+* to match our page style
+*/  
 .navbar {
   background-color: #0c0c0f;
   margin-bottom: 0;
   border-radius: 0;
   font-size: medium;
 }
-
 .navbar-brand{
   padding-right: 50px;
 }
 
 
-.items {
+/*
+* sytle for the content in page
+* healthcare and financial.php
+*/
+.contents {
+  width: 80%;
   display: block;
   text-align: center;
   margin: 10%;
@@ -26,6 +39,11 @@ body{
   text-align: left;
 }
 
+
+
+/*
+* Sytle for the container in about.php
+*/
 .container {
   display: flex;
   flex-direction: row;
@@ -35,15 +53,22 @@ body{
   height: 90%;
 }
 
-.aboutContant {
+/*
+* Sytle for the text content in about.php
+*/
+.aboutContent {
   margin-top: 2%;
   margin-left: 10%;
   flex: 1;
   padding: 1rem;
   width: 90%;
   text-align: left;
+  font-size: large;
 }
 
+/*
+* style for the contact information in about.php
+*/
 .contactInfo {
   max-width: 20%;
   max-height: 30%;
@@ -52,82 +77,37 @@ body{
   border-style: inset;
   border-radius: 10px;
 }
- 
 
-
-#submit{
-  background-color: #078f15;
-  border-radius: 15%;
-  border: 0;
-  margin-top: 15%;
-}
-#submit-button:hover{
-	background-color: #0af021;
-}
-
-
-.options{
-  margin: auto;
-  margin-top: 5%;
-  width: 45%;
-  padding: 10px;
-  float: left;
-}
-.options > p{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size:medium;
-}
-
-.options > .red{
-  background-color: red;
-}
-.options > .red:hover{
-  background-color: lightcoral;
-}
-
-
-.options > button{
-  background-color: #078f15;
-  color: rgb(255, 255, 255);
-  border-radius: 8%;
-  border: 0;
-  width: auto;
-  padding: 1%;
-}
-
-.options > button:hover{
-	background-color: #0af021;
-  color: #000000;
-}
-.logo-img{
-  margin-top: 15%; 
-  max-height: 40px; 
-  max-width: 50px;
-}
+/*
+* style for the logo displayed in about.php
+*/
 .page-logo{
   display: block;
   align-items: center;
   width: 30%;
 }
 
+/*
+* logo image in navbar styling 
+*/
+.logo-img{
+  margin-top: 15%; 
+  max-height: 40px; 
+  max-width: 50px;
+}
+
+/*
+* Custom styling for the small screens
+*/
 @media (max-width: 768px) {
-  .options{
-    margin: auto;
-    margin-top: 5%;
-    width: 90%;
-  }
-  .options > p{
-    font-size:1.5rem;
-  }
   .logo-img{
     max-height: 45px; 
     max-width: 55px;
     margin-top: 1%; 
     margin-left: 15%; 
   }
-  .page-logo{
-    display:none;
-  }
+  
+  /*Style for about page*/
   .container {
     flex-direction: column;
     align-items: center;
@@ -138,6 +118,9 @@ body{
   }
   .contactInfo {
     max-width: 90%;
-
+    margin: 1%;
+  }
+  .page-logo{
+    display:none;
   }
 }

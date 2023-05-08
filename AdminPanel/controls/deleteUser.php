@@ -1,18 +1,21 @@
 <?php
-// get the user ID from the $_POST array
+// get the user ID, this will be sent when the user will click delete button
 $user_id = $_GET['user_id'];
 
-// delete the user from the database
                                         //"mysql:host=localhost; dbname=usercompanydb",'root', ''
-                                        //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
-$conn = new PDO("mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord');
-$stmt = $conn->prepare("DELETE FROM user WHERE user_id = :user_id");
-$stmt->bindParam(':user_id', $user_id);
-$stmt->execute();
+                                        //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord
+// create a connection to the database                                            
+$con = new PDO("mysql:host=localhost; dbname=usercompanydb",'root', '');
+// the query that will be sent to the database (with the value)
+$query = $con->prepare("DELETE FROM user WHERE user_id = :user_id");
+// Set the value like the one company_id data (Data got when user clicked on delete button)
+$query->bindParam(':user_id', $user_id);
+// Execute the query
+$query->execute();
 
-// close the database connection
-$conn = null;
+// close connection
+$con = null;
 
-// return a response to the AJAX request
+// Redirect the user to the adminPanel.php
 header("Location: ../adminPanel.php");
 ?>

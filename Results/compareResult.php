@@ -41,12 +41,15 @@
         <ul class="nav navbar-nav navbar-right">
         <?php
           if(isset($_SESSION['user_id'])) {
-              // User is logged in, display username and Logout button
-              //echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+                // If admin display admin panel 
+                if($_SESSION['admin']) {
+                  echo '<li><a href="../AdminPanel/adminPanel.php"><span class="glyphicon glyphicon-pencil"></span> Admin Panel</a></li>';
+               }
+                    // If logged in, display username and Logout button
               echo '<li><a><span style="margin:0; padding: 0;"id="username"></span></a></li>';
               echo '<li><a href="../Authentication/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
           } else {
-              // User is not logged in, display Login button
+              // If not logged in, display Login button
               echo '<li><a href="./Pages/login-form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
           }
           ?>            
@@ -54,31 +57,43 @@
       </div>
     </div>
   </nav>
- 
-    <form class="content" id="content">
+
+<!--Form for files uploading at the start-->
+  <form class="content" id="content">
       <h1>Compare test results</h1>
         <p>
         To utilize these features, you will need two results files for comparison. 
         Simply select both files and initiate the comparison.
         </p>
-      <label for="file1">Upload File 1:</label>
-      <input type="file" id="file1" name="file1">
-      <br><br>
-      <label for="file2">Upload File 2:</label>
-      <input type="file" id="file2" name="file2">
-      <br><br>
+        <label for="file1">Upload File 1:</label>
+        <input type="file" id="file1" name="file1">
+        <br><br>
+        <label for="file2">Upload File 2:</label>
+        <input type="file" id="file2" name="file2">
+        <br><br>
       <button type="button" onclick="checkFile()">Submit</button>
-    </form>
+  </form>
  
 
 
-  <h1 id="Titel"></h1>
-  <div class="CompareFiles">
-    <p id="Comparison-Description"></p>
-    <canvas id="chart"></canvas>
-  </div>
+          <h1 id="Titel"></h1>
+          <!--Div for the content after file uploaded-->
+          <div class="CompareFiles">
+              <p id="Comparison-Description"></p>
+              <p id="instruction-text"  class="instruction-text" style=" margin: 2%;"></p>
+              <!--Div for chart-->
+              <div class="chart">
+                <canvas id="chart" width="740" height="320"></canvas>
+              </div>
+          </div>
+           <!--Div for the user answers boxs-->
+           <div class="answersContainer">
+                  <div id="userAnswersContainer1" style="font-weight: bold;"></div>
+                  <div id="userAnswersContainer2" style="font-weight: bold;"></div>
+            </div>
   
       <script>
+        // This script will fetch the user name if logged-in
         const Username = "<?php echo $_SESSION['name']; ?>";
         const usernameDisplay = document.getElementById("username");
         usernameDisplay.textContent = `${Username}`;
