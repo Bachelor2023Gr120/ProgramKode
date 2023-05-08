@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   
     // update the user record in the database
            //192.168.1.25 | passord
-    $conn = new PDO("mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord');
+    $conn = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
     $stmt = $conn->prepare("UPDATE user SET name = :name, email = :email, password = :password, company_id = :company, admin = :admin WHERE user_id = :user_id");
 
     $stmt->bindParam(':name', $name);
