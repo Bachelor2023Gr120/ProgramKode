@@ -103,15 +103,6 @@
                                   <h3>Sondre Bakke</h3><a href="mailto: sondrsba@stud.ntnu.no">sondrsba@stud.ntnu.no</a>
                                 </span>
                               </div>
-                              <div>
-                                <hr>
-                                <h2>Sopra Steria:</h2>
-                                <span>
-                                  <h3>Tea Knudsen</h3><a href="mailto: tea.knudsen@soprasteria.com">tea.knudsen@soprasteria.com</a>
-                                  <p></p>
-                                </span>
-                              
-                              </div>
                             </div>
                             
                           </span>
