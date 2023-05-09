@@ -94,13 +94,13 @@
                               <div">
                                 <h2>Team Members:</h2>
                                 <span>
-                                  <h3>Murad Dimen</h3><a href="mailto: Moradha@moradha@stud.ntnu.no">moradha@stud.ntnu.no</a>
+                                  <h3>Murad Dimen</h3><a href="mailto:moradha@stud.ntnu.no">moradha@stud.ntnu.no</a>
                                 </span>
                                 <span>
                                   <h3>Jonas Simonsen</h3><a href="mailto:jonasfsi@stud.ntnu.no">jonasfsi@stud.ntnu.no</a>
                                 </span>
                                 <span>
-                                  <h3>Sondre Bakke</h3><a href="mailto: sondrsba@stud.ntnu.no">sondrsba@stud.ntnu.no</a>
+                                  <h3>Sondre Bakke</h3><a href="mailto:sondrsba@stud.ntnu.no">sondrsba@stud.ntnu.no</a>
                                 </span>
                               </div>
                             </div>
