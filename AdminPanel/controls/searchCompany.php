@@ -3,8 +3,14 @@
 <hr> 
 
 <?php  
-                                        //"mysql:host=localhost; dbname=usercompanydb",'root', ''
-                                        //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
+/**
+ * This source to create the functions:
+ * https://www.php.net/manual/en/pdostatement.bindparam.php
+ * https://www.w3schools.com/php/php_mysql_prepared_statements.asp
+ * https://www.php.net/manual/en/pdostatement.rowcount.php
+ * 
+ */
+
 // create a connection to the database 
  $con = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
     // the query that will be sent to the database

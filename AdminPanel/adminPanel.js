@@ -25,7 +25,7 @@ function loadSearchUserForm() {
       if (xhr.status === 200) {
         // set the content/text like  the response text
         UserListDiv.innerHTML = xhr.responseText;
-      } else { // lese alert an error messege
+      } else { //alert an error messege if not
         alert('There was a problem loading the form.');
       }
     }

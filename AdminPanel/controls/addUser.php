@@ -33,9 +33,12 @@
                 <select id="inputState" class="form-control" name="company_id" required>
                     <option value="" disabled selected>Choose..</option>
 
-                    <?php                
-                                                                                        //"mysql:host=localhost; dbname=usercompanydb",'root', ''
-                                                                                        //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
+                    <?php    
+                    /**
+                     * This source to create the functions:
+                     * https://www.php.net/manual/en/pdostatement.bindparam.php
+                     * https://www.w3schools.com/php/php_mysql_prepared_statements.asp
+                     */            
 
                         // This code will connect to the database and bring all company names that exist in the DB.
                         // create a connection to the database.
@@ -81,8 +84,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $company_id= $_POST['company_id'];
     $admin = isset($_POST['admin']) ? 1 : 0;
 
-                                        //"mysql:host=localhost; dbname=usercompanydb",'root', ''
-                                        //"mysql:host=192.168.1.25 ; dbname=usercompanydb",'root', 'passord'
     // create a connection to the database 
     $con = new PDO("mysql:host=192.168.1.25; dbname=usercompanydb",'root', 'passord');
 

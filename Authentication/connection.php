@@ -5,8 +5,6 @@
  *  https://www.geeksforgeeks.org/how-to-create-admin-login-page-using-php/
  */
 
-                 //192.168.1.25 |localhost| passord
-
         // Variables used in the database connection
     $host = "192.168.1.25";  //Database serveren
     $email = "root";  
