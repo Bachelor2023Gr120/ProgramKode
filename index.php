@@ -56,13 +56,20 @@
   <!--The home page content-->
 <h1 style="font-weight: bold;">Welcome to CyberTest4You</h1>
 <div class="main-content"> 
-  <p>Press the “test center” tab to start the tests.</p>      
-   <h3></h3>
-      <p></p>
+  <p>CyberTest4You prioritizes system and data security. To ensure that the organizations are following the industry security best practices
+     and maintaining a high level of security, we have developed a security compliance testing tool.
+    </p>      
+    <p>Our security compliance tester is a comprehensive tool designed to assess the organization's compliance degree within ISO27001 security 
+       standards and regulations. It evaluates the organization's systems, processes, and controls to ensure that they meet the necessary
+       requirements for data protection, confidentiality, integrity, and availability.
+      </p>
+      <p>CyberTest4You provides a user-friendly interface, guiding you through a series of questions and assessments related to security practices. 
+        It covers areas such as access controls, network security, data handling, incident response, employee training, and more. Upon completion, you will 
+        receive a comprehensive report that highlights areas of compliance and areas that need improvement.
+      </p>
       <br><br><br><br><br>
    <h2> Choose your sector of expertise:</h2>
-     <p>
-     </p> 
+
 </div>
 
 <!--Both containers that contain the sectors-->
